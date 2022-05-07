@@ -1,0 +1,50 @@
+.about__heading__main {
+  margin-top: 10px !important;
+  font-weight: 450;
+  font-size: 18px;
+  line-height: 28px;
+  margin-left: 20px;
+}
+
+.about__main__col {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.about__secondary__col {
+  margin-top: 30px;
+}
+
+.about__secondary__col h3 {
+  color: #2c398d;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.about__description > h5 {
+  font-weight: 450;
+  font-size: 18px;
+  line-height: 28px;
+}
+
+.about__full__name {
+  font-weight: 550;
+}
+
+.aboutus__main__col {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.aboutus__main__col h5 {
+  font-weight: 450;
+  font-size: 18px;
+  line-height: 28px;
+}
+
+.aboutus__main__icon {
+  margin-right: 20px;
+  color: #ec008d !important;
+}

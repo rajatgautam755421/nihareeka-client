@@ -1,0 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@200;400&family=EB+Garamond:wght@400;500&family=Jost:wght@300;400;500;800&display=swap");
+
+/* .photobody{
+  height: 600px !important;
+} */
+.image-title {
+  position: absolute;
+  top: 100px !important;
+  background-color: #073e7f;
+  width: 30vw;
+  height: 22vh;
+  opacity: 0.9;
+  padding: 10px;
+
+  box-shadow: 10px 10px #f7f7f7;
+  margin-bottom: 400px;
+  font-family: "Jost", sans-serif !important;
+}
+.Title {
+  font-size: 2.5vw;
+  font-weight: 600;
+  text-align: left;
+}
+.pDescription {
+  font-size: 17px !important;
+}
+
+@media screen and (max-width: 750px) {
+  .image-title {
+    position: absolute;
+    top: 50px !important;
+    background-color: #073e7f;
+    width: auto;
+    height: 16vh;
+    opacity: 0.78;
+    padding: 20px;
+    margin-bottom: 400px;
+    font-family: "Jost", sans-serif !important;
+  }
+  .Title {
+    font-size: 5.5vw;
+    font-weight: bold;
+  }
+  .spann {
+    font-size: 12px !important;
+  }
+}
+
+.spann {
+  font-size: 14px;
+  padding: 0 1vw;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translate3d(var(--move-initial), 0, 0);
+  }
+
+  80% {
+    transform: translate3d(var(--move-final), 0, 0);
+  }
+}

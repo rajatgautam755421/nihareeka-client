@@ -1,0 +1,50 @@
+.faculty__main__image {
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center !important;
+  align-items: center;
+  position: relative;
+}
+
+.faculty__main__image::before {
+  content: "";
+  background-image: url("https://images.unsplash.com/photo-1571260899304-425eee4c7efc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80");
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-blend-mode: darken;
+
+  background-size: cover;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  background-color: rgba(0, 0, 0, 0.4);
+
+  opacity: 0.6;
+}
+
+@media screen and (max-width: 600px) {
+  .faculty__main__image {
+    min-height: 60vh;
+  }
+}
+
+.faculty__main__icon {
+  width: 50px !important;
+  height: 50px !important;
+  color: white;
+}
+
+.faculty__main__bba {
+  width: 100px !important;
+  height: 100px !important;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ec008d;
+  position: relative;
+}

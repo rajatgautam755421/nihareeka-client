@@ -1,0 +1,13 @@
+@media screen and (max-width: 600px) {
+  .section__login__main {
+    width: 80% !important;
+  }
+}
+
+.contact__input__main {
+  border: 2px solid lightgray !important;
+}
+
+.contact__input__main:focus {
+  border: 2px solid #d90081 !important;
+}

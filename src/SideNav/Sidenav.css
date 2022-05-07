@@ -1,0 +1,81 @@
+.sidenav__ul li{
+    margin: 20px 0px;
+    font-size: 20px;
+}
+
+.close__sidenav:hover{
+    animation: slidein 1s ease-in-out;
+    color: red;
+}
+
+
+@keyframes slidein {
+    from {
+      transform: rotate(0deg)
+    }
+  
+    to {
+      transform:  rotate(360deg)
+    }
+  }
+  
+  .college__sidenav{
+      width: 430px !important;
+      height: 40px !important;
+      margin-left: -30px;
+     
+  }
+  .sidenav_body{
+      width: 350px;
+  }
+
+
+  .sidenav__li{
+      outline: none !important;
+      margin-right: 20px !important;
+  }
+
+  .sidenav__li:focus{
+    outline: none !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+.facebook{
+    color: gray;
+}
+.facebook:hover{
+    color: #0D8AF0;
+    transition-duration: 10s !important;
+}
+.insta{
+    color: gray;
+   
+}
+.insta:hover{
+    transition-delay: 10s !important;
+    color: #C13584;
+   
+}
+.google{
+    color: gray;
+}
+.linkedin{
+    color: gray ;
+}
+.plus {
+    color: gray;
+}
+
+.linkedin:hover{
+    color: #0e76a8 ;
+}
+
+.googleplus:hover .google  {
+    color: rgb(205, 202, 50);
+
+}
+.googleplus:hover .plus  {
+    
+    color: red;
+}

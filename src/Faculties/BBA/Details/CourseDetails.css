@@ -1,0 +1,27 @@
+.courses__name__main {
+  cursor: pointer;
+  height: 50px;
+}
+
+.courses__name__main:hover {
+  background-color: rgba(204, 204, 204, 0.5);
+  border-radius: 5px;
+}
+.courses__name__main:hover > a > h4 {
+  color: #ec008d !important;
+}
+
+.courses__name__main > a {
+  text-decoration: none;
+  color: black;
+}
+
+.courses__name__main > a > h4 {
+  margin-top: 13px;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+thead > tr {
+  background-color: lightgray;
+}

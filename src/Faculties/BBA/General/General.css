@@ -1,0 +1,32 @@
+.general__icon__main {
+  color: #ec008d !important;
+  width: 70px !important;
+  height: 70px !important;
+}
+
+.general__col__main {
+  display: flex;
+}
+
+.general__col__main h5 {
+  color: #ec008d;
+  font-size: 18px;
+}
+
+.general__col__main h4 {
+  font-weight: bold;
+}
+
+.course__description {
+  margin-top: 30px;
+}
+
+.course__description > h5 {
+  font-weight: 450;
+  font-size: 18px;
+  line-height: 28px;
+}
+
+.course__full__name {
+  font-weight: 550;
+}

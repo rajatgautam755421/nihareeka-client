@@ -1,0 +1,49 @@
+.tabs__icons {
+  width: 40px !important;
+  height: 40px !important;
+  cursor: pointer;
+  color: black;
+  margin: 0px auto !important;
+}
+
+@media screen and (max-width: 600px) {
+  .tabs__icons {
+    width: 30px !important;
+    height: 30px !important;
+  }
+}
+
+.tabs__icons__selected {
+  width: 40px !important;
+  height: 40px !important;
+  cursor: pointer;
+  color: #ec008e;
+  margin: 0px auto !important;
+}
+
+@media screen and (max-width: 600px) {
+  .tabs__icons__selected {
+    width: 30px !important;
+    height: 30px !important;
+  }
+}
+
+.tabs__main {
+  margin-top: 40px;
+}
+.tabs__main__col {
+  cursor: pointer;
+  border-bottom: 3px solid #ec008e !important;
+  border-radius: 1px;
+  font-size: bold;
+}
+
+.no__select {
+  cursor: pointer;
+  border-bottom: 2px solid transparent !important;
+}
+
+.no__select:hover {
+  background-color: rgba(204, 204, 204, 0.4);
+  border-radius: 5px;
+}

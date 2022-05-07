@@ -1,0 +1,101 @@
+.footerlastborder {
+  border-top: 1px solid gray;
+  border-left: 1px solid gray;
+  border-right: 1px solid gray;
+}
+
+.serviceparagraph {
+  text-decoration: none;
+  color: black;
+}
+.serviceparagraph:hover {
+  color: green;
+}
+
+.importantlinks:hover {
+  color: green;
+}
+.faqlinks:hover {
+  color: green;
+}
+.gmaillink:hover {
+  color: green;
+}
+
+.importantlinks {
+  text-decoration: none;
+  color: black;
+}
+.faqlinks {
+  text-decoration: none;
+  color: black;
+}
+.gmaillink {
+  text-decoration: none;
+  color: black;
+}
+
+.links__main {
+  text-align: justify !important;
+}
+
+.stayconnected {
+  margin-left: 200px !important;
+  font-size: large;
+}
+
+.main__subscribe__label {
+  position: absolute;
+  top: -14px;
+  font-size: 18px !important;
+  left: 20px;
+  z-index: 100 !important;
+  color: black !important;
+}
+
+.subscribebtn {
+  background-color: #22c514;
+}
+.social__media {
+  text-align: center;
+}
+.contact__facebook {
+  color: rgb(255, 255, 255);
+}
+.contact__Insta {
+  color: #e98483;
+}
+.contact__LinkedIn {
+  color: rgb(18, 7, 85);
+}
+.contact__Youtube {
+  color: rgb(233, 20, 20);
+}
+.newsletter {
+  margin-top: 30px;
+  /* width: 400px; */
+}
+@media screen and (max-width: 500px) {
+  .newsletter {
+    margin-top: 30px;
+    /* width: 400px; */
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+.colorr {
+  background-color: rgb(13, 13, 128) !important;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.footer__main__app {
+  padding: 12px;
+}
+
+@media screen and (max-width: 600px) {
+  .footer__main__app {
+    padding: 25px;
+  }
+}

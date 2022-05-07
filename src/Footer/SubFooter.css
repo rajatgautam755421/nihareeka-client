@@ -1,0 +1,23 @@
+
+.footer__links{
+    text-decoration: none !important;
+    list-style: none !important;
+    color: white;
+    cursor: pointer;
+}
+
+.footer__links:hover{
+color: white !important;
+text-decoration: underline !important;
+
+}
+
+.main__sub__footer{
+    color: white !important;
+}
+.main__sub__footer:hover > li{
+    color: white !important;
+}
+.main__footer> span{
+    display: block !important;
+}

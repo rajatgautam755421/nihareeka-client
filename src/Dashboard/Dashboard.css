@@ -1,0 +1,32 @@
+.add_photo {
+  background-color: aliceblue;
+}
+.contact__us__main__button {
+  border: 2px solid #d90081 !important;
+  background-color: transparent;
+  color: black;
+}
+
+.contact__us__main__button:hover {
+  background-color: #d90081 !important;
+  color: white;
+  border: none;
+}
+.contact__input__main {
+  border: 2px solid lightgray !important;
+}
+
+.contact__input__main:focus {
+  border: 2px solid #d90081 !important;
+}
+.main__secction1 {
+  height: auto !important;
+}
+
+.contact__input1__main {
+  border: 2px solid lightgray !important;
+}
+
+.contact__input1__main:focus {
+  border: 2px solid #d90081 !important;
+}

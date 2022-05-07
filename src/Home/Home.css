@@ -1,0 +1,95 @@
+.items {
+  display: flex;
+  position: relative;
+}
+.bitmap {
+  width: 25.1rem;
+  margin: 30px;
+}
+.Course__Title {
+  text-align: center;
+  color: #d90081;
+  font-size: bold !important;
+  font-size: 44px;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 500px) {
+  .logobox {
+    padding: 30px !important;
+  }
+  .Course__Title {
+    text-align: center;
+    color: #1d67a8;
+    font-size: bold !important;
+    font-size: 35px;
+    font-weight: bold;
+  }
+  .hovereffect {
+    filter: none !important;
+    -webkit-filter: grayscale(0) !important;
+  }
+}
+
+.br2 {
+  border: 1px solid orange;
+  border-image: url("https://img00.deviantart.net/feb2/i/2008/309/e/5/border_lineart_8_by_inspyretash_stock.jpg")
+    100 / /* slice */ 20px 23px 18px 20px / /* width */ 18px 14px 9px 10px
+    /* outset */ round;
+}
+
+.Course_Carousel {
+  padding: 20px;
+}
+
+.beauty {
+  padding: 20px;
+}
+.welcome__message {
+  border: 1px solid rgb(219, 207, 207);
+  border-radius: 10px;
+  padding: 10px !important;
+  margin: 50px;
+}
+.message {
+  font-size: 18px;
+  border-left: 1px solid rgb(219, 207, 207);
+}
+.welcome__principal {
+  color: #f54278;
+}
+.welcome__principal > h6 {
+  color: rgb(71, 80, 199);
+}
+.Welcome__title {
+  color: #646dac;
+  font-size: bold !important;
+  font-size: 30px;
+}
+.welcome__image {
+  margin-right: 0vh;
+}
+.display {
+  background-color: #f54278;
+}
+.hovereffect {
+  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+}
+
+.hovereffect:hover {
+  filter: none;
+  -webkit-filter: grayscale(0);
+}
+.logobox {
+  padding: 40px;
+}
+.img-fluid {
+  border: 1px solid black !important;
+}
+.scroll_top {
+  text-decoration: none;
+  position: fixed;
+  top: 500px;
+  left: 200px;
+}

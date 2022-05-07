@@ -1,0 +1,17 @@
+.requirements__main__col {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.requirements__main__icon {
+  margin-right: 20px;
+  color: #ec008d !important;
+}
+
+.requirements__main__col h5 {
+  margin: 10px 0px !important;
+  font-weight: 450;
+  font-size: 18px;
+  line-height: 28px;
+}
