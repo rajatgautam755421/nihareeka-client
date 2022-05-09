@@ -19,6 +19,9 @@ import Dashboard from "./Dashboard/Dashboard1";
 import Panel from "./Dashboard/Panel";
 import ScrollRes from "./ScroolRestoration/ScroolRestoration";
 import Devlopers from "./Devlopers/Devlopers";
+import NoPage from "./NoPage/NoPage";
+import FacultyMem from "./FacultyMem/FacultyMem";
+import TabNav from "./TabNav/TabNav";
 
 function App() {
   return (
@@ -40,8 +43,11 @@ function App() {
         <Route path="/faculty/bhm" element={<BHM />} />
         <Route path="/faculty/csit" element={<CSIT />} />
         <Route path="/news-event" element={<NewsAndEvents />} />
+        <Route path="/faculty-members" element={<FacultyMem />} />
         <Route path="/devlopers" element={<Devlopers />} />
+        <Route path="*" element={<NoPage />} />
       </Routes>
+      <TabNav />
       <Footer />
     </div>
   );

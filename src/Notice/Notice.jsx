@@ -4,6 +4,8 @@ import "./Notice.css";
 
 const Notice = () => {
   const [notices, setNotices] = useState([]);
+  const [search, setSearch] = useState("");
+  const [error, setError] = useState(false);
   useEffect(() => {
     const fetchData = async () => {
       const { data } = await axios.get("http://localhost:4000/api/v1/notice");
@@ -16,16 +18,56 @@ const Notice = () => {
     };
     fetchData();
   }, []);
+  const filteredValues = notices.filter((Events) => {
+    return Events.title.toLowerCase().includes(search.toLowerCase());
+  });
+  const keyPress = () => {
+    if (filteredValues.length === 0) {
+      setError(true);
+      console.log("No such events");
+    } else {
+      setError(false);
+      console.log("Yes Events");
+    }
+  };
+
   return (
     <>
-      <h1 style={{ textAlign: "center", color: "#D90081", padding: "20px" }}>
+      <h1
+        style={{ textAlign: "center", color: "#D90081", padding: "20px" }}
+        id="search__main__id"
+      >
         <b>Notices</b>
       </h1>
+      <form className="d-flex container">
+        <input
+          className="form-control me-2 searchbar__main"
+          type="search"
+          placeholder="Search For Events"
+          aria-label="Search"
+          onChange={(e) => setSearch(e.target.value)}
+          onKeyUp={keyPress}
+          id="search__main__id"
+        />
+      </form>
+
+      {error ? (
+        <h4 style={{ margin: "10px 0px", textAlign: "center" }}>
+          No Such Notices
+        </h4>
+      ) : null}
+      {notices
+        ? notices.length === 0 && (
+            <h6 style={{ marginTop: "10px", textAlign: "center" }}>
+              No Notices Published
+            </h6>
+          )
+        : null}
       <section className="text-gray-600 body-font overflow-hidden">
         <div className="container px-5 py-5 mx-auto">
           <div className="-my-8 divide-y-2 divide-gray-100">
-            {notices
-              ? notices.map((value) => {
+            {filteredValues
+              ? filteredValues.map((value) => {
                   return (
                     <>
                       <div className="py-8 md:flex-nowrap">
@@ -40,6 +82,7 @@ const Notice = () => {
                           </h2>
                         </div>
                       </div>
+                      <hr />
                     </>
                   );
                 })

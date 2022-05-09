@@ -4,6 +4,9 @@ import React, { useEffect, useState } from "react";
 
 const Result = () => {
   const [notices, setNotices] = useState([]);
+  const [search, setSearch] = useState("");
+  const [error, setError] = useState("");
+  const [faculty, setFaculty] = useState("");
   useEffect(() => {
     const fetchData = async () => {
       const { data } = await axios.get("http://localhost:4000/api/v1/result");
@@ -16,11 +19,46 @@ const Result = () => {
     };
     fetchData();
   }, []);
+  const filteredValues = notices
+    ? notices.filter((Events) => {
+        return Events.faculty
+          ? Events.faculty.toLowerCase().includes(search.toLowerCase())
+          : null;
+      })
+    : null;
+  const keyPress = () => {
+    if (filteredValues.length === 0) {
+      setError(true);
+      console.log("No Result");
+    } else {
+      setError(false);
+      console.log("Yes Events");
+    }
+  };
+
   return (
     <>
       <h1 style={{ textAlign: "center", color: "#D90081", padding: "20px" }}>
         <b>Results</b>
       </h1>
+      <form className="d-flex container">
+        <input
+          className="form-control me-2 searchbar__main"
+          type="search"
+          placeholder="Search By Faculty Name (csit,bca,bbs,bhm,bim)"
+          aria-label="Search"
+          onChange={(e) => setSearch(e.target.value)}
+          onKeyUp={keyPress}
+          id="search__main__id"
+        />
+      </form>
+      {notices.length !== 0 ? (
+        error ? (
+          <h4 style={{ margin: "10px 0px", textAlign: "center" }}>
+            No Result Found For {search ? search.toUpperCase() : null} Faculty
+          </h4>
+        ) : null
+      ) : null}
       {notices
         ? notices.length === 0 && (
             <h6 style={{ marginTop: "10px", textAlign: "center" }}>
@@ -28,11 +66,12 @@ const Result = () => {
             </h6>
           )
         : null}
+
       <section className="text-gray-600 body-font overflow-hidden">
         <div className="container px-5 py-5 mx-auto">
           <div className="-my-8 divide-y-2 divide-gray-100">
-            {notices
-              ? notices.slice(0, 6).map((value) => {
+            {filteredValues
+              ? filteredValues.map((value) => {
                   return (
                     <>
                       <div className="py-8 md:flex-nowrap">
@@ -47,7 +86,8 @@ const Result = () => {
                             target="_blank"
                             style={{ textDecoration: "none", color: "black" }}
                           >
-                            {value.title}
+                            {value.title} ---{" "}
+                            {value ? value.faculty.toUpperCase() : null}
                           </h2>
                         </div>
                         <a
@@ -71,6 +111,7 @@ const Result = () => {
                           </svg>
                         </a>
                       </div>
+                      <hr />
                     </>
                   );
                 })

@@ -1,26 +1,23 @@
-import React, { useEffect, useState } from "react";
-import DeleteIcon from "@mui/icons-material/Delete";
-
 import axios from "axios";
-import DeleteResultData from "./DeleteResultData";
+import React, { useEffect, useState } from "react";
 
-const DeleteResult = ({ fetch2, fetch3, setFetch3 }) => {
-  const [result, setResults] = useState([]);
+import EventsTableData from "./EventsTableData";
+const EnentsTable = () => {
+  const [events, setEvents] = useState([]);
   const [render, setRender] = useState(false);
 
   useEffect(() => {
-    const fetchItems = async () => {
-      const { data } = await axios.get("http://localhost:4000/api/v1/result");
+    const fetchData = async () => {
+      const { data } = await axios.get("http://localhost:4000/api/v1/events");
       try {
         console.log(data);
-        setResults(data);
+        setEvents(data);
       } catch (error) {
         console.log(error.message);
       }
     };
-    fetchItems();
-  }, [render, fetch2, fetch3]);
-
+    fetchData();
+  }, [render]);
   return (
     <>
       <table className="table main__secction1">
@@ -28,20 +25,22 @@ const DeleteResult = ({ fetch2, fetch3, setFetch3 }) => {
           <tr>
             <th>S.No</th>
             <th scope="col">Title</th>
-            <th scope="col">Faculty</th>
+
+            <th scope="col">Category</th>
+            <th scope="col">Image</th>
             <th scope="col">Action</th>
           </tr>
         </thead>
         <tbody>
-          {result
-            ? result.length === 0 && (
-                <h6 style={{ marginTop: "10px" }}>No Results</h6>
+          {events
+            ? events.length === 0 && (
+                <h6 style={{ marginTop: "10px" }}>No Events</h6>
               )
             : null}
-          {result.map((value, index) => {
+          {events.map((value, index) => {
             return (
               <>
-                <DeleteResultData
+                <EventsTableData
                   value={value}
                   render={render}
                   setRender={setRender}
@@ -56,4 +55,4 @@ const DeleteResult = ({ fetch2, fetch3, setFetch3 }) => {
   );
 };
 
-export default DeleteResult;
+export default EnentsTable;

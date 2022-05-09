@@ -54,20 +54,22 @@ const Footer = () => {
                 link2="021-462086"
                 link3="Biratnagar-9,Bargachhi"
                 link4="6:00 AM - 3:00 PM"
+                linkto5=""
               />{" "}
             </div>
             <div className="col-md-2 col-6" style={{ marginTop: "30px" }}>
               <SubFooter
                 heading="Faculties"
                 link1="Bsc.CSIT"
-                linkto1=""
+                linkto1="/faculty/csit"
                 link2=" BCA"
-                linkto2=""
+                linkto2="faculty/bca"
                 link3="BHM"
-                linkto3=""
+                linkto3="faculty/bhm"
                 link4="BIT"
-                linkto4=""
+                linkto4="faculty/bit"
                 link5="BBS"
+                linkto5="faculty/bbs"
               />{" "}
             </div>
 
@@ -76,14 +78,15 @@ const Footer = () => {
               <SubFooter
                 heading="Links"
                 link1="Home"
-                linkto1=""
-                link2=" Gallery"
-                linkto2=""
+                linkto1="/"
+                link2="Gallery"
+                linkto2="/gallery"
                 link3="About Us"
-                linkto3=""
+                linkto3="/about-us"
                 link4="News & Notice"
-                linkto4=""
+                linkto4="/news-event"
                 link5="Contact Us"
+                linkto5="/contact-us"
               />
             </div>
             <div className="col-md-4 col-12 newsletter">

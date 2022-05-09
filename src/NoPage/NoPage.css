@@ -1,0 +1,10 @@
+.image__no__page {
+  width: 50%;
+  margin: 0px auto;
+}
+
+@media screen and (max-width: 600px) {
+  .image__no__page {
+    width: 80%;
+  }
+}

@@ -1,0 +1,31 @@
+@media screen and (max-width: 1000px) {
+  .tabnav__main {
+    width: 80% !important;
+    height: 60px;
+    position: fixed;
+    top: 96vh;
+    transform: translateY(-100%);
+    z-index: 600;
+    background-color: #d90081;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-left: 40px;
+  }
+  .active__tab > .tab__nav__icon {
+    color: black !important;
+  }
+  .white__tab__main {
+    color: white !important;
+  }
+  .black__tab__main {
+    color: black !important;
+  }
+}
+
+@media screen and (min-width: 1001px) {
+  .tabnav__main {
+    display: none;
+  }
+}

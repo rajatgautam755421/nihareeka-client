@@ -1,8 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Dosis:wght@200;400&family=EB+Garamond:wght@400;500&family=Jost:wght@300;400;500;800&display=swap");
 
-/* .photobody{
-  height: 600px !important;
-} */
+.photobody {
+  height: 80vh !important;
+}
 .image-title {
   position: absolute;
   top: 100px !important;

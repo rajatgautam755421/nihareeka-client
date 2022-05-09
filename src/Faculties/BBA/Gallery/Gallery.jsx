@@ -1,4 +1,5 @@
 import React from "react";
+import "./Gallery.css";
 
 const Gallery = ({ courseName, images }) => {
   return (
@@ -6,6 +7,19 @@ const Gallery = ({ courseName, images }) => {
       <h1 style={{ marginTop: "50px", textAlign: "center", color: "#ec008d" }}>
         {courseName ? courseName : null} Gallery
       </h1>
+      {images
+        ? images.length === 0 && (
+            <h4
+              style={{
+                color: "black",
+                textAlign: "center",
+                margin: "30px 0px",
+              }}
+            >
+              No Images Of {courseName}
+            </h4>
+          )
+        : null}
       <section className="text-gray-600 body-font">
         <div className="container px-5 mt-5 mx-auto">
           <div className="flex flex-wrap -m-4">
@@ -13,11 +27,14 @@ const Gallery = ({ courseName, images }) => {
               ? images.map((value) => {
                   return (
                     <>
-                      <div className="lg:w-1/3 sm:w-1/2 p-4">
-                        <div className="flex relative">
+                      <div
+                        className="lg:w-1/3 sm:w-1/2 p-4 "
+                        style={{ margin: "0px auto" }}
+                      >
+                        <div className="flex relative faculty__members__image__main__gallery">
                           <img
                             alt="gallery"
-                            className="absolute inset-0 w-full h-full object-cover object-center"
+                            className="absolute inset-0 w-full h-full object-cover object-center "
                             src={value.pic}
                             style={{ borderRadius: "5px" }}
                           />

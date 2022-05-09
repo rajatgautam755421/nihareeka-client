@@ -30,7 +30,7 @@ const Devlopers = () => {
               <div className="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left">
                 <img
                   alt="team"
-                  className="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center sm:mb-0 mb-4"
+                  className="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center sm:mb-0 mb-4 faculty__members__image__main"
                   src="https://scontent.fbir1-1.fna.fbcdn.net/v/t39.30808-6/241855550_229065692614371_7064837356271760728_n.jpg?_nc_cat=102&ccb=1-6&_nc_sid=09cbfe&_nc_ohc=Cs2YwRQEJOsAX9r65p9&_nc_ht=scontent.fbir1-1.fna&oh=00_AT_BRtN2nnpCMU9iaEt3gmlOoLVSY_Q1GwEjng7be1Q8Mw&oe=627A110C"
                 />
                 <div className="flex-grow sm:pl-8">
@@ -90,8 +90,8 @@ const Devlopers = () => {
               <div className="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left">
                 <img
                   alt="team"
-                  src="https://scontent.fbir1-1.fna.fbcdn.net/v/t31.18172-8/21551852_1941923816049413_8348797021150459100_o.jpg?_nc_cat=104&ccb=1-6&_nc_sid=174925&_nc_ohc=yrGqcD8rzJMAX-dQpAk&_nc_ht=scontent.fbir1-1.fna&oh=00_AT_5iT-u5XUAAcDwyYNC9aMG8_NL0LYtWZdvqwSqtHTfxw&oe=629B7A96"
-                  className="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center sm:mb-0 mb-4"
+                  src="https://scontent.fbir1-1.fna.fbcdn.net/v/t1.6435-9/89436754_2647674882140966_2218007809864237056_n.jpg?_nc_cat=100&ccb=1-6&_nc_sid=174925&_nc_ohc=TFGbBEP4FJ0AX9xcVbq&_nc_ht=scontent.fbir1-1.fna&oh=00_AT_87kN7vrrfHffVkz1bmgRhIUC6uJmiIH9w-QryIaewNQ&oe=629BCCFA"
+                  className="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center sm:mb-0 mb-4 faculty__members__image__main"
                 />
                 <div className="flex-grow sm:pl-8">
                   <h3 className="text-gray-900 mb-3">Samrat Ojha</h3>
@@ -151,7 +151,7 @@ const Devlopers = () => {
               <div className="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left">
                 <img
                   alt="team"
-                  className="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center sm:mb-0 mb-4"
+                  className="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center sm:mb-0 mb-4 faculty__members__image__main"
                   src="https://scontent.fbir1-1.fna.fbcdn.net/v/t1.6435-9/53400544_601447973657815_2057514455494819840_n.jpg?_nc_cat=109&ccb=1-6&_nc_sid=19026a&_nc_ohc=SiZt2TENvVsAX8mvUzW&_nc_ht=scontent.fbir1-1.fna&oh=00_AT_SCuNg9vDzgTJQoLJSifEwMR59NNFJOpylDpfgvqVxEA&oe=6299FEC8"
                 />
                 <div className="flex-grow sm:pl-8">

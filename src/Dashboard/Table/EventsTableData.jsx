@@ -3,19 +3,16 @@ import DeleteIcon from "@mui/icons-material/Delete";
 import axios from "axios";
 import { toast } from "react-toastify";
 
-const DeleteResultData = ({ value, setRender, render, index }) => {
-  console.log(value);
-
+const EventsTableData = ({ value, index, render, setRender }) => {
   const handleClick = async (e) => {
     e.preventDefault();
     const { data } = await axios.delete(
-      `http://localhost:4000/api/v1/result/${value ? value._id : null}`
+      `http://localhost:4000/api/v1/events/${value ? value._id : null}`
     );
     try {
-      console.log(data);
       setRender(!render);
-
-      toast.success("Result Deleted Successfully");
+      console.log(data);
+      toast.success("Event Deleted Successfully");
     } catch (error) {
       console.log(error.message);
     }
@@ -23,10 +20,14 @@ const DeleteResultData = ({ value, setRender, render, index }) => {
   return (
     <>
       <tr key={value._id}>
-        <td>{index}</td>
-        <td>{value.title}</td>
-        <td>{value.faculty}</td>
-
+        <th scope="row">{index}</th>
+        <td>{value ? value.title : null}</td>
+        <td>{value ? value.category : null}</td>
+        <td>
+          <div className="bg-cyan-300">
+            <img src={value.pic} className="object-scale-down h-10 w-auto" />
+          </div>
+        </td>
         <td>
           {" "}
           <button>
@@ -43,4 +44,4 @@ const DeleteResultData = ({ value, setRender, render, index }) => {
   );
 };
 
-export default DeleteResultData;
+export default EventsTableData;

@@ -25,7 +25,7 @@ function Management() {
               name={"Rupesh Khatiwada"}
               post={"Chairman"}
               image={
-                "https://scontent.fbir1-1.fna.fbcdn.net/v/t39.30808-6/274753098_662582745191764_8579588804535381888_n.jpg?_nc_cat=101&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=myK9QqFz13IAX__TB0H&tn=66lPQ8t7KYrn0e9f&_nc_ht=scontent.fbir1-1.fna&oh=00_AT8tYReGN3tcu2GslrtPG6NJm3rFEmO5bV3o3AxQUObcwg&oe=6263911D"
+                "https://scontent.fbir1-1.fna.fbcdn.net/v/t39.30808-6/274753098_662582745191764_8579588804535381888_n.jpg?_nc_cat=101&ccb=1-6&_nc_sid=09cbfe&_nc_ohc=h_syc1aoyK8AX-vIinb&tn=66lPQ8t7KYrn0e9f&_nc_ht=scontent.fbir1-1.fna&oh=00_AT8PxkxKknWqFI37uK4fjKM_VdG17UQtYoglTF68n27soQ&oe=627D465D"
               }
             />
             <ManagamentInfo

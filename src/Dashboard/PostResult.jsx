@@ -2,24 +2,28 @@ import axios from "axios";
 import React, { useState } from "react";
 import { toast } from "react-toastify";
 
-const PostResult = () => {
+const PostResult = ({ fetch3, setFetch3 }) => {
   const [title, setTitle] = useState("");
   const [link, setLink] = useState("");
+  const [faculty, setFaculty] = useState("bsccsit");
 
   const handleCLick = async (e) => {
     e.preventDefault();
-    if (title === "" || link === "") {
+    if (title === "" || link === "" || faculty === "") {
       toast.error("Fields Are Empty");
     } else {
       const { data } = await axios.post("http://localhost:4000/api/v1/result", {
         title,
+        faculty,
         link,
       });
       try {
         console.log(data);
         toast.success("Result Posted Successfully");
+        setFetch3(!fetch3);
         setTitle("");
         setLink("");
+        setFaculty("");
       } catch (error) {
         console.log(error.message);
       }
@@ -91,6 +95,22 @@ const PostResult = () => {
                           onChange={(e) => setTitle(e.target.value)}
                         />
                       </div>
+                    </div>
+                    <div className="inline-block relative w-64">
+                      <label className="block text-sm font-medium text-neutral-600">
+                        Choose Faculty{" "}
+                      </label>
+                      <select
+                        onChange={(e) => setFaculty(e.target.value)}
+                        className="contact__input1__main  w-full   px-4 py-3 pr-8 mt-1 mb-1 "
+                      >
+                        <option value="bsccsit">CSIT</option>
+                        <option value="bca">BCA</option>
+                        <option value="bim">BIM</option>
+
+                        <option value="bbs">BBS</option>
+                        <option value="bhm">BHM</option>
+                      </select>
                     </div>
 
                     <div>

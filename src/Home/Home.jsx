@@ -12,7 +12,7 @@ import BIT from "../assets/CSIT/library.JPG";
 import BIM from "../assets/BIM/BIM.JPG";
 import CSIT from "../assets/CSIT/CSIT.JPG";
 import BCA from "../assets/BCA/BCA.JPG";
-import NoticeModel from "../NoticeModel/NoticeModel";
+import Testimonials from "../Testimonials/Testimonials";
 
 const Home = (props) => {
   const [showModal, setShowModal] = useState(false);
@@ -101,6 +101,7 @@ const Home = (props) => {
           </Carousel>
         </div>
       </div>
+      <Testimonials />
     </>
   );
 };

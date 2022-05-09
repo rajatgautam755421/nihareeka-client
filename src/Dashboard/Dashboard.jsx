@@ -16,10 +16,13 @@ import DeleteIcon from "@mui/icons-material/Delete";
 import PostResult from "./PostResult";
 import PostAddIcon from "@mui/icons-material/PostAdd";
 import DeleteResult from "./Table/DeleteResult";
+import EnentsTable from "./Table/EnentsTable.jsx";
+import EventIcon from "@mui/icons-material/Event";
 
 const Dashboard = () => {
   const [render, setRender] = useState(false);
   const [fetch1, setFetch] = useState(false);
+  const [fetch3, setFetch3] = useState(false);
   console.log(render);
   return (
     <>
@@ -107,12 +110,27 @@ const Dashboard = () => {
               <PostAddIcon fontSize="large" style={{ color: "#390081" }} />{" "}
               <b>Post Result</b>
             </h4>
-            <PostResult />
+            <PostResult fetch3={fetch3} setFetch3={setFetch3} />
           </div>
         </div>
         <div className="row mt-5">
           <div className="col-md-5">
-            <DeleteResult />
+            <h4
+              style={{ textAlign: "center", color: "#D90081", padding: "40px" }}
+            >
+              <DeleteIcon fontSize="large" style={{ color: "#390081" }} />{" "}
+              <b>Delete Result</b>
+            </h4>
+            <DeleteResult fetch3={fetch3} setFetch2={setFetch3} />
+          </div>
+          <div className="col-md-7">
+            <h4
+              style={{ textAlign: "center", color: "#D90081", padding: "40px" }}
+            >
+              <EventIcon fontSize="large" style={{ color: "#390081" }} />{" "}
+              <b>All Events</b>
+            </h4>
+            <EnentsTable />
           </div>
         </div>
       </div>

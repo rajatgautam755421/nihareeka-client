@@ -3,13 +3,15 @@ import { Sling as Hamburger } from "hamburger-react";
 import { Spin as Hamburger1 } from "hamburger-react";
 import "./Navbar.css";
 import SearchIcon from "@mui/icons-material/Search";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import Sidenav from "./SideNav/Sidenav";
 import { useLocation } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setOpen] = useState(false);
   const { pathname } = useLocation();
+  console.log(pathname);
+
   console.log(pathname);
   console.log(isOpen);
   const [openSideNav, setOpenSideNav] = useState(false);
@@ -134,14 +136,14 @@ const Navbar = () => {
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink className="dropdown-item" to="/devlopers">
-                      Devlopers
+                    <NavLink className="dropdown-item" to="/faculty-members">
+                      Faculty Member
                     </NavLink>
                   </li>
                   <li>
-                    <a className="dropdown-item" href="#">
-                      Faculty Member
-                    </a>
+                    <NavLink className="dropdown-item" to="/devlopers">
+                      Devlopers
+                    </NavLink>
                   </li>
                 </ul>
               </li>
@@ -155,11 +157,14 @@ const Navbar = () => {
                   News And Events
                 </NavLink>
               </li>
-              <li className="  ">
-                <NavLink className="nav-link search" to="news-event">
-                  <SearchIcon />
-                </NavLink>
-              </li>
+              {pathname === "/news-event" && (
+                <li className="  ">
+                  <a className="nav-link search" href="#search__main__id">
+                    <SearchIcon />
+                  </a>
+                </li>
+              )}
+
               <li className="  ">
                 <a
                   className="nav-link menu  "

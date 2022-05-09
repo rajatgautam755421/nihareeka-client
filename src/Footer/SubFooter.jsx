@@ -6,6 +6,7 @@ import EmailIcon from "@mui/icons-material/Email";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+import { Link } from "react-router-dom";
 const SubFooter = ({
   heading,
   link1,
@@ -15,10 +16,11 @@ const SubFooter = ({
   link5,
   link6,
   linkto2,
+  linkto1,
   linkto3,
   linkto4,
-  linkto5,
   linkto6,
+  linkto5,
 }) => {
   return (
     <div className=" w-full px-1 main__sub__footer " style={{ color: "white" }}>
@@ -57,9 +59,9 @@ const SubFooter = ({
               <ArrowForwardIosIcon style={{ fontSize: "small" }} />
             </span>
             <li style={{ margin: "5px 0px" }}>
-              <a href="#link" className="Pulse footer__links">
+              <Link to={linkto1} className="Pulse footer__links">
                 {link1}
-              </a>
+              </Link>
             </li>
           </div>
         )}
@@ -91,9 +93,9 @@ const SubFooter = ({
               <ArrowForwardIosIcon style={{ fontSize: "small" }} />
             </span>
             <li style={{ margin: "5px 0px" }}>
-              <a href="#link" className="footer__links">
+              <Link to={linkto2} className="footer__links">
                 {link2}
-              </a>
+              </Link>
             </li>
           </div>
         )}
@@ -125,9 +127,9 @@ const SubFooter = ({
               <ArrowForwardIosIcon style={{ fontSize: "small" }} />
             </span>
             <li style={{ margin: "5px 0px" }}>
-              <a href="#link" className="footer__links">
+              <Link to={linkto3} className="footer__links">
                 {link3}
-              </a>
+              </Link>
             </li>
           </div>
         )}
@@ -159,9 +161,9 @@ const SubFooter = ({
               <ArrowForwardIosIcon style={{ fontSize: "small" }} />
             </span>
             <li style={{ margin: "5px 0px" }}>
-              <a href="#link" className="footer__links">
+              <Link to={linkto4} className="footer__links">
                 {link4}
-              </a>
+              </Link>
             </li>
           </div>
         )}
@@ -179,9 +181,9 @@ const SubFooter = ({
               <ArrowForwardIosIcon style={{ fontSize: "small" }} />
             </span>
             <li style={{ margin: "5px 0px" }}>
-              <a href="#link" className="footer__links">
+              <Link to={linkto5} className="footer__links">
                 {link5}
-              </a>
+              </Link>
             </li>
           </div>
         ) : null}{" "}

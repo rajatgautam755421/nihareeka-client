@@ -1,9 +1,9 @@
-.faculty__members__image__main__gallery {
+.faculty__members__image__main {
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.25), 0 0 6px rgba(0, 0, 0, 0.05);
   transition: 0.4s transform cubic-bezier(0.155, 1.105, 0.5, 2), 0.3s box-shadow,
     0.3s -webkit-transform cubic-bezier(0.155, 1.105, 0.295, 1.12);
 }
-.faculty__members__image__main__gallery:hover {
-  transform: scale(1.07);
+.faculty__members__image__main:hover {
+  transform: scale(1.1);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12), 0 4px 8px rgba(0, 0, 0, 0.06);
 }

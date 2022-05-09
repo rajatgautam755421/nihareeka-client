@@ -33,6 +33,13 @@ const NewsAndEvents = () => {
       >
         <b>Events</b>
       </h1>
+      {notices
+        ? notices.length === 0 && (
+            <h6 style={{ marginTop: "10px", textAlign: "center" }}>
+              No Events
+            </h6>
+          )
+        : null}
       <section className="text-gray-600 body-font">
         <div className="container px-5 py-24 mx-auto">
           <div className="flex flex-wrap -m-4">
