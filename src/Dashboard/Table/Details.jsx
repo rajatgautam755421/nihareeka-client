@@ -15,7 +15,7 @@ const Details = () => {
     const fetchData = async () => {
       setLoading(true);
       const { data } = await axios.get(
-        `https://nihareeka-college.herokuapp.com/api/v1/form/${id}`
+        `http://128.199.18.46:4003/api/v1/form/${id}`
       );
 
       try {
@@ -34,12 +34,12 @@ const Details = () => {
 
   const handleAccept = async () => {
     const { data } = await axios.put(
-      `https://nihareeka-college.herokuapp.com/api/v1/form/update/${id}/accepted`
+      `http://128.199.18.46:4003/api/v1/form/update/${id}/accepted`
     );
     setRender(!render);
     if (data) {
       const response = await axios.get(
-        `https://nihareeka-college.herokuapp.com/api/v1/mail/accept/${
+        `http://128.199.18.46:4003/api/v1/mail/accept/${
           info ? info.email : null
         }/Your Admission Request Has Been Accepted`
       );
@@ -57,12 +57,12 @@ const Details = () => {
 
   const handleReject = async () => {
     const { data } = await axios.put(
-      `https://nihareeka-college.herokuapp.com/api/v1/form/update/${id}/rejected`
+      `http://128.199.18.46:4003/api/v1/form/update/${id}/rejected`
     );
     setRender(!render);
     if (data) {
       const response = await axios.get(
-        `https://nihareeka-college.herokuapp.com/api/v1/mail/reject/${
+        `http://128.199.18.46:4003/api/v1/mail/reject/${
           info ? info.email : null
         }/Your Admission Request Has Been Rejected`
       );

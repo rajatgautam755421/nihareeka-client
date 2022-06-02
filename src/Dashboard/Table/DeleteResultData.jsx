@@ -10,9 +10,7 @@ const DeleteResultData = ({ value, setRender, render, index }) => {
   const handleClick = async (e) => {
     e.preventDefault();
     const { data } = await axios.delete(
-      `https://nihareeka-college.herokuapp.com/api/v1/result/${
-        value ? value._id : null
-      }`
+      `http://128.199.18.46:4003/api/v1/result/${value ? value._id : null}`
     );
     try {
       console.log(data);

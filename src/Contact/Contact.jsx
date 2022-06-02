@@ -30,7 +30,7 @@ const Contact = ({ badge, setBadge }) => {
       setLoading(true);
       try {
         const { data } = await axios.post(
-          "https://nihareeka-college.herokuapp.com/api/v1/contact",
+          "http://128.199.18.46:4003/api/v1/contact",
           { name, email, message }
         );
         setLoading(true);
@@ -42,7 +42,7 @@ const Contact = ({ badge, setBadge }) => {
         setMessage("");
         setLoading(false);
         const response = await axios.put(
-          `https://nihareeka-college.herokuapp.com/api/v1/notification/${request}`
+          `http://128.199.18.46:4003/api/v1/notification/${request}`
         );
       } catch (error) {
         toast.error("Network Error");

@@ -10,7 +10,7 @@ const Result = () => {
   useEffect(() => {
     const fetchData = async () => {
       const { data } = await axios.get(
-        "https://nihareeka-college.herokuapp.com/api/v1/result"
+        "http://128.199.18.46:4003/api/v1/result"
       );
       try {
         console.log(data);

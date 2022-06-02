@@ -46,7 +46,7 @@ const UpdateGallery = ({ setFetch, fetch1 }) => {
     } else {
       setLoading(true);
       const { data } = await axios.post(
-        "https://nihareeka-college.herokuapp.com/api/v1/gallery",
+        "http://128.199.18.46:4003/api/v1/gallery",
         {
           pic,
           title,

@@ -9,9 +9,7 @@ const NoticeData = ({ value, setRefresh, refresh }) => {
   const handleDelete = async () => {
     setLoading(true);
     const { data } = await axios.delete(
-      `https://nihareeka-college.herokuapp.com/api/v1/notice/${
-        value ? value._id : null
-      }`
+      `http://128.199.18.46:4003/api/v1/notice/${value ? value._id : null}`
     );
     try {
       console.log(data);

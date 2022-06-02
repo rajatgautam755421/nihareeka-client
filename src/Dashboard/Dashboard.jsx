@@ -30,7 +30,7 @@ const Dashboard = () => {
   useEffect(() => {
     const handleClick = async () => {
       const { data } = await axios.put(
-        `https://nihareeka-college.herokuapp.com/api/v1/notification/false`
+        `http://128.199.18.46:4003/api/v1/notification/false`
       );
       try {
         console.log(data);

@@ -7,9 +7,7 @@ import { Tooltip } from "@mui/material";
 const TableData = ({ value, setClicked, clicked }) => {
   const handleClick = async () => {
     const { data } = await axios.delete(
-      `https://nihareeka-college.herokuapp.com/api/v1/contact/${
-        value ? value._id : null
-      }`
+      `http://128.199.18.46:4003/api/v1/contact/${value ? value._id : null}`
     );
     try {
       setClicked(!clicked);

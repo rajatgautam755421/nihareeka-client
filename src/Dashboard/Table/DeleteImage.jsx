@@ -11,7 +11,7 @@ const GalleryImage = ({ fetch1 }) => {
     const fetchItems = async () => {
       setLoading(true);
       const { data } = await axios.get(
-        "https://nihareeka-college.herokuapp.com/api/v1/gallery"
+        "http://128.199.18.46:4003/api/v1/gallery"
       );
       try {
         setLoading(true);

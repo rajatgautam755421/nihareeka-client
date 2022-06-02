@@ -314,19 +314,19 @@ const Sidenav = ({ setOpenSideNav, setOpen }) => {
                     <li>
                       <a
                         style={{ textDecoration: "none", marginLeft: "35px" }}
-                        href="https://www.youtube.com/watch?v=uVRs6TFb0OU"
+                        href=""
                       >
                         <FacebookIcon className="facebook" />
                       </a>
                       <a
                         style={{ textDecoration: "none", marginLeft: "20px" }}
-                        href="https://www.youtube.com/watch?v=uVRs6TFb0OU"
+                        href=""
                       >
                         <InstagramIcon className="insta" />
                       </a>
                       <a
                         style={{ textDecoration: "none", marginLeft: "20px" }}
-                        href="https://www.youtube.com/watch?v=uVRs6TFb0OU"
+                        href=""
                         className="googleplus"
                       >
                         <GoogleIcon className="google" />
@@ -336,7 +336,7 @@ const Sidenav = ({ setOpenSideNav, setOpen }) => {
                       </a>
                       <a
                         style={{ textDecoration: "none", marginLeft: "20px" }}
-                        href="https://www.youtube.com/watch?v=uVRs6TFb0OU"
+                        href=""
                       >
                         <LinkedInIcon className="linkedin" />{" "}
                       </a>

@@ -13,7 +13,7 @@ const PostResult = ({ fetch3, setFetch3 }) => {
       toast.error("Fields Are Empty");
     } else {
       const { data } = await axios.post(
-        "https://nihareeka-college.herokuapp.com/api/v1/result",
+        "http://128.199.18.46:4003/api/v1/result",
         {
           title,
           faculty,

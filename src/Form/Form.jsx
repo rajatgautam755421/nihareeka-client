@@ -52,7 +52,7 @@ const Form = ({ value }) => {
         try {
           setLoading(true);
           const { data } = await axios.post(
-            "https://nihareeka-college.herokuapp.com/api/v1/form",
+            "http://128.199.18.46:4003/api/v1/form",
             {
               firstName,
               middleName,
@@ -119,7 +119,7 @@ const Form = ({ value }) => {
         try {
           setLoading(true);
           const { data } = await axios.post(
-            "https://nihareeka-college.herokuapp.com/api/v1/form",
+            "http://128.199.18.46:4003/api/v1/form",
             {
               firstName,
               middleName,
