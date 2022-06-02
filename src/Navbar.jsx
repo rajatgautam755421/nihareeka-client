@@ -1,24 +1,63 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Sling as Hamburger } from "hamburger-react";
 import { Spin as Hamburger1 } from "hamburger-react";
 import "./Navbar.css";
 import SearchIcon from "@mui/icons-material/Search";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import Sidenav from "./SideNav/Sidenav";
 import { useLocation } from "react-router-dom";
+import CircleNotificationsOutlinedIcon from "@mui/icons-material/CircleNotificationsOutlined";
+import CircleNotificationsIcon from "@mui/icons-material/CircleNotifications";
+import Notification from "./Notification/Notification";
+import axios from "axios";
+import Loader from "./Loader";
+import { TailSpin } from "react-loader-spinner";
+import { toast } from "react-toastify";
+import { Badge, Tooltip } from "@mui/material";
 
-const Navbar = () => {
+const Navbar = ({ clicked, setClicked }) => {
+  console.log(clicked);
   const [isOpen, setOpen] = useState(false);
   const { pathname } = useLocation();
-  console.log(pathname);
-
-  console.log(pathname);
-  console.log(isOpen);
+  const [noti, setNoti] = useState(false);
+  const [show, setShow] = useState([]);
+  const [badge, setBadge] = useState(false);
   const [openSideNav, setOpenSideNav] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const handleRestore = () => {
     window.scrollTo(0, 0);
   };
+
+  const userInfo = localStorage.getItem("userInfo");
+  useEffect(() => {
+    setNoti(false);
+  }, [pathname]);
+
+  useEffect(() => {
+    setLoading(true);
+    const getData = async () => {
+      const { data } = await axios.get(
+        "http://128.199.18.46:4003/api/v1/notification"
+      );
+      try {
+        setLoading(true);
+        setShow(data[0]);
+        console.log(show.notification);
+        setLoading(false);
+      } catch (error) {
+        setLoading(false);
+      }
+    };
+    getData();
+  }, [clicked, pathname]);
+  useEffect(() => {
+    if (show.notification === true) {
+      setBadge(true);
+    } else if (show.notification === false) {
+      setBadge(false);
+    }
+  });
 
   return (
     <>
@@ -31,12 +70,14 @@ const Navbar = () => {
         style={{ opacity: "1" }}
       >
         <div className="container-fluid">
-          <img
-            src="https://nihareekacollege.edu.np/templates/nihareekacollegeofmanagementandit/images/title.png"
-            alt=""
-            srcset=""
-            className="college__logo__main"
-          />
+          <NavLink to="/" style={{ textDecoration: "none", border: "none" }}>
+            <img
+              src="https://nihareekacollege.edu.np/templates/nihareekacollegeofmanagementandit/images/title.png"
+              alt=""
+              srcset=""
+              className="college__logo__main"
+            />
+          </NavLink>
           <button
             className="navbar-toggler"
             type="button"
@@ -102,6 +143,16 @@ const Navbar = () => {
                       BHM
                     </NavLink>
                   </li>
+                  <li>
+                    <NavLink className="dropdown-item" to="/faculty/bim">
+                      BIM
+                    </NavLink>
+                  </li>
+                  <li>
+                    <NavLink className="dropdown-item" to="/faculty/mbs">
+                      MBS
+                    </NavLink>
+                  </li>
                 </ul>
               </li>
               <li className="nav-item">
@@ -148,6 +199,11 @@ const Navbar = () => {
                 </ul>
               </li>
               <li className="nav-item">
+                <NavLink className="nav-link " to="/online-admission">
+                  Online Admission
+                </NavLink>
+              </li>
+              <li className="nav-item">
                 <NavLink className="nav-link " to="/gallery">
                   Gallery
                 </NavLink>
@@ -157,14 +213,63 @@ const Navbar = () => {
                   News And Events
                 </NavLink>
               </li>
-              {pathname === "/news-event" && (
-                <li className="  ">
-                  <a className="nav-link search" href="#search__main__id">
-                    <SearchIcon />
-                  </a>
-                </li>
-              )}
 
+              {loading ? (
+                <>
+                  <li>
+                    <a className="nav-link search">
+                      <TailSpin
+                        color="#000"
+                        height={30}
+                        width={30}
+                        timeout={3500}
+                      />
+                    </a>
+                  </li>
+                </>
+              ) : (
+                <>
+                  {userInfo && (
+                    <>
+                      <li className={badge ? "Active__Badge" : null}>
+                        <a className="nav-link search">
+                          <Tooltip title="Notifications">
+                            {badge ? (
+                              <Badge badgeContent={1} color="success">
+                                <CircleNotificationsIcon
+                                  style={{
+                                    width: "30px",
+                                    height: "30px",
+                                    cursor: "pointer",
+                                  }}
+                                  onClick={() => setNoti(!noti)}
+                                />
+                              </Badge>
+                            ) : (
+                              <CircleNotificationsOutlinedIcon
+                                style={{
+                                  width: "30px",
+                                  height: "30px",
+                                  cursor: "pointer",
+                                }}
+                                onClick={() => setNoti(!noti)}
+                              />
+                            )}
+                          </Tooltip>
+                        </a>
+                      </li>
+                    </>
+                  )}
+                </>
+              )}
+              {noti && (
+                <Notification
+                  badge={badge}
+                  setBadge={setBadge}
+                  clicked={clicked}
+                  setClicked={setClicked}
+                />
+              )}
               <li className="  ">
                 <a
                   className="nav-link menu  "

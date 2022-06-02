@@ -13,6 +13,12 @@ const CourseDetails = ({ courseName }) => {
       setHlink(
         "https://www.collegenote.net/courses/CSIT/all-courses/#gsc.tab=0"
       );
+    } else if (courseName === "BIM") {
+      setHlink("https://www.collegesnepal.com/syllabus/bim/");
+    } else if (courseName === "MBS") {
+      setHlink("https://www.collegesnepal.com/syllabus/mbs/");
+    } else if (courseName === "BHM") {
+      setHlink("https://www.collegesnepal.com/syllabus/bhm/");
     }
   }, []);
   return (

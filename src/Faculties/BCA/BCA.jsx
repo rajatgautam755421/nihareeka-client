@@ -8,7 +8,7 @@ const BCA = () => {
   useEffect(() => {
     const fetchData = async () => {
       const { data } = await axios.get(
-        "http://localhost:4000/api/v1/gallery/faculty/bca"
+        "https://nihareeka-college.herokuapp.com/api/v1/gallery/faculty/bca"
       );
       try {
         console.log(data);

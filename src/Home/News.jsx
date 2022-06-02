@@ -4,7 +4,9 @@ import React, { useEffect, useState } from "react";
 const News = () => {
   const [events, setEvents] = useState([]);
   const fetchDaata = async () => {
-    const { data } = await axios.get("http://localhost:4000/api/v1/events");
+    const { data } = await axios.get(
+      "https://nihareeka-college.herokuapp.com/api/v1/events"
+    );
     try {
       console.log(data);
       setEvents(data);
@@ -23,13 +25,15 @@ const News = () => {
           <b>News & activities</b>
         </h1>
         <div className="grid grid-cols-1 sm:grid-cols-12 gap-10">
-          <div className="sm:col-span-6 lg:col-span-9">
+          <div className="sm:col-span-12 lg:col-span-9">
             <a href="#link">
               <div
-                className=" bg-cover text-center overflow-hidden"
+                className=" bg-cover text-center overflow-hidden news__events__image__1"
                 style={{
-                  minHeight: 500,
+                  height: 500,
                   backgroundImage: `url(${events[0] ? events[0].pic : null})`,
+                  backgroundSize: "cover",
+                  backgroundRepeat: "no-repeat",
                 }}
                 title="Nihareeka News&Activities"
               ></div>
@@ -52,7 +56,7 @@ const News = () => {
             <div className="mb-2">
               <a href="#link">
                 <div
-                  className="h-40 bg-cover text-center overflow-hidden"
+                  className="h-40 bg-cover text-center overflow-hidden  news__events__image__1"
                   style={{
                     backgroundImage: `url(${events[1] ? events[1].pic : null})`,
                   }}
@@ -69,7 +73,7 @@ const News = () => {
             <div className="mb-2">
               <a href="#link">
                 <div
-                  className="h-40 bg-cover text-center overflow-hidden"
+                  className="h-40 bg-cover text-center overflow-hidden  news__events__image__1"
                   style={{
                     backgroundImage: `url(${events[2] ? events[2].pic : null})`,
                   }}
@@ -86,7 +90,7 @@ const News = () => {
             <div>
               <a href="#link">
                 <div
-                  className="h-40 bg-cover text-center overflow-hidden"
+                  className="h-40 bg-cover text-center overflow-hidden news__events__image__1"
                   style={{
                     backgroundImage: `url(${events[3] ? events[3].pic : null})`,
                   }}

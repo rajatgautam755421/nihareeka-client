@@ -2,11 +2,14 @@ import React from "react";
 import DeleteIcon from "@mui/icons-material/Delete";
 import axios from "axios";
 import { toast } from "react-toastify";
+import { Tooltip } from "@mui/material";
 
 const TableData2 = ({ value, setClicked }) => {
   const handleClick = async () => {
     const { data } = await axios.delete(
-      `http://localhost:4000/api/v1/newsletter/${value ? value._id : null}`
+      `https://nihareeka-college.herokuapp.com/api/v1/newsletter/${
+        value ? value._id : null
+      }`
     );
     try {
       setClicked(true);
@@ -26,11 +29,13 @@ const TableData2 = ({ value, setClicked }) => {
           {" "}
           <button>
             {" "}
-            <DeleteIcon
-              fontSize="small"
-              style={{ color: "#d11a2a", marginLeft: "15px" }}
-              onClick={handleClick}
-            />
+            <Tooltip title="Delete">
+              <DeleteIcon
+                fontSize="small"
+                style={{ color: "#d11a2a", marginLeft: "15px" }}
+                onClick={handleClick}
+              />
+            </Tooltip>
           </button>{" "}
         </td>
       </tr>

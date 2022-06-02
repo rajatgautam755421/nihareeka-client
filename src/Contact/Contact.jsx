@@ -6,13 +6,15 @@ import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
 import { ThreeDots } from "react-loader-spinner";
 import { toast } from "react-toastify";
 import axios from "axios";
+import Loader from "../Loader";
 
-const Contact = () => {
+const Contact = ({ badge, setBadge }) => {
   const [show, setShow] = useState(false);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
-
+  const [loading, setLoading] = useState(false);
+  const request = true;
   useEffect(() => {
     setShow(true);
     setTimeout(() => {
@@ -25,24 +27,33 @@ const Contact = () => {
     if (name === "" || email === "" || message === "") {
       toast.error("Fields Cannot Be Empty");
     } else {
+      setLoading(true);
       try {
         const { data } = await axios.post(
-          "http://localhost:4000/api/v1/contact",
+          "https://nihareeka-college.herokuapp.com/api/v1/contact",
           { name, email, message }
         );
+        setLoading(true);
+
         console.log(data);
         toast.success(`${name} Your Feedback Is Successfully Recieved`);
         setName("");
         setEmail("");
         setMessage("");
+        setLoading(false);
+        const response = await axios.put(
+          `https://nihareeka-college.herokuapp.com/api/v1/notification/${request}`
+        );
       } catch (error) {
         toast.error("Network Error");
+        setLoading(false);
       }
     }
   };
   console.log(email, name, message);
   return (
     <>
+      {loading && <Loader />}
       <div className="container" style={{ marginTop: "30px" }}>
         <div className="row mt-4">
           <div className="col-md-8 mt-4">
@@ -163,7 +174,7 @@ const Contact = () => {
                 <div>
                   <BusinessOutlinedIcon className="details__address__main__icon" />
                   <span className="address__text">
-                    Chandani Marg, Biratnagar 56613
+                    Chandani Marg, Biratnagar
                   </span>
                 </div>
               </div>
@@ -189,11 +200,11 @@ const Contact = () => {
             >
               <div className="details__address__main">
                 <LocalPhoneOutlinedIcon className="details__address__main__icon" />
-                <span>9814085370</span>
+                <span>021-512863</span>
               </div>
               <div className="details__address__main mt-2">
                 <LocalPhoneOutlinedIcon className="details__address__main__icon" />
-                <span>9814085370</span>
+                <span>021-512864</span>
               </div>
             </div>
           </div>
@@ -218,7 +229,7 @@ const Contact = () => {
               <div className="details__address__main">
                 <div>
                   <EmailOutlinedIcon className="details__address__main__icon" />
-                  <span>nihareekacollege@gmail.com</span>
+                  <span>nihareekacollegebrt@gmail.com</span>
                 </div>
               </div>
             </div>

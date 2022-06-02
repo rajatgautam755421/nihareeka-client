@@ -8,11 +8,15 @@ import Course from "../Course/Course";
 import WelcomeMessage from "./WelcomeMessage";
 import News from "./News";
 import Partners from "./Partners";
-import BIT from "../assets/CSIT/library.JPG";
+import BBS from "../assets/CSIT/CSIT.JPG";
+import BHM from "../assets/BIM/BIM.JPG";
+
+import MBS from "../assets/CSIT/library.JPG";
 import BIM from "../assets/BIM/BIM.JPG";
 import CSIT from "../assets/CSIT/CSIT.JPG";
 import BCA from "../assets/BCA/BCA.JPG";
 import Testimonials from "../Testimonials/Testimonials";
+import Modal from "../Modal/Modal";
 
 const Home = (props) => {
   const [showModal, setShowModal] = useState(false);
@@ -39,6 +43,7 @@ const Home = (props) => {
   }, []);
   return (
     <>
+      <Modal />
       <div style={{ padding: "0px 15px" }}>
         <Hero />
 
@@ -80,23 +85,57 @@ const Home = (props) => {
           >
             <div className="beauty">
               {" "}
-              <Course course={"Bsc.CSIT"} image={CSIT} />
+              <Course
+                course={"Bsc.CSIT"}
+                desc="Bachelor of Science in Computer Science and Information technology (B.Sc.CSIT) provides knowledge about principles of Computer Science and Information technology."
+                time="4 years|8 semesters"
+                image={CSIT}
+              />
             </div>
             <div className="beauty">
               {" "}
-              <Course course={"BBS"} image={BIM} />
+              <Course
+                course={"BHM"}
+                desc="Bachelor of Hotel Management is an undergraduate program that produces technical and social skills based on hospitality industries and catering services."
+                image={BHM}
+                time="4 years|8 semester"
+              />
             </div>
             <div className="beauty">
               {" "}
-              <Course course={"BIM"} image={BIT} />
+              <Course
+                course={"BCA"}
+                desc="Bachelor of Computer Application is a four years program spread over eight semesters. It is a program that helps to produce software developers and programmers."
+                image={BCA}
+                time="4 years|8 semester"
+              />
             </div>
 
             <div className="beauty">
-              <Course course={"BHM"} image={BCA} />
+              <Course
+                course={"BIM"}
+                desc="Bachelor of Information Management is four years program of Tribhuvan University that provides knowledge of Management Information and Communication System."
+                image={BIM}
+                time="4 years|8 semester"
+              />
+            </div>
+            <div className="beauty">
+              <Course
+                course={"BBS"}
+                time="4 years"
+                desc="
+Bachelor of Business Studies or BBS is an undergraduate degree based on semesterwise program that provides in depth studies of business and helps to build the set of business related skills."
+                image={BBS}
+              />
             </div>
             <div className="beauty">
               {" "}
-              <Course course={"BIT"} image={CSIT} />
+              <Course
+                course={"MBS"}
+                desc="Masters of Business Studies is a two years graduate level program in Business and Management."
+                time="2 years|4 semester"
+                image={MBS}
+              />
             </div>
           </Carousel>
         </div>

@@ -8,7 +8,9 @@ const Hero = () => {
   const [newsDate, setNewsDate] = useState("");
   const fetchData = async () => {
     try {
-      const { data } = await axios.get("http://localhost:4000/api/v1/notice");
+      const { data } = await axios.get(
+        "https://nihareeka-college.herokuapp.com/api/v1/notice"
+      );
       console.log(data);
       setNotice(data);
     } catch (error) {

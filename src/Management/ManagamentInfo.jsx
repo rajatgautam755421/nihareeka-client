@@ -3,7 +3,7 @@ import React from "react";
 const ManagamentInfo = ({ image, name, post, fa, tw, wh }) => {
   return (
     <>
-      <div className="p-4 lg:w-1/2" style={{ margin: "0px auto" }}>
+      <div className="p-4 lg:w-1/3 " style={{ margin: "0px auto" }}>
         <div className="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left">
           <img
             alt="team"
@@ -20,7 +20,7 @@ const ManagamentInfo = ({ image, name, post, fa, tw, wh }) => {
             </h2>
 
             <span className="inline-flex">
-              <a className="text-pink-500">
+              <a className="text-pink-500" href={fa} target="_blank">
                 <svg
                   fill="none"
                   stroke="currentColor"
@@ -33,7 +33,7 @@ const ManagamentInfo = ({ image, name, post, fa, tw, wh }) => {
                   <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" />
                 </svg>
               </a>
-              <a className="ml-2 text-pink-500">
+              <a className="ml-2 text-pink-500" href={tw} target="_blank">
                 <svg
                   fill="none"
                   stroke="currentColor"
@@ -46,7 +46,7 @@ const ManagamentInfo = ({ image, name, post, fa, tw, wh }) => {
                   <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z" />
                 </svg>
               </a>
-              <a className="ml-2 text-pink-500">
+              <a className="ml-2 text-pink-500" href={wh} target="_blank">
                 <svg
                   fill="none"
                   stroke="currentColor"

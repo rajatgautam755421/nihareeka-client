@@ -4,22 +4,22 @@ import { toast } from "react-toastify";
 import "./Dashboard.css";
 
 const Notice = ({ setRender, render }) => {
-  console.log(render);
   const [title, setTitle] = useState("");
-
   const [startDate, setStartDate] = useState("");
   const [endDate, setEndDate] = useState("");
-
   const handleClick = async (e) => {
     e.preventDefault();
     if (title === "" || startDate === "" || endDate === "") {
       toast.error("Fields Are Empty");
     } else {
-      const { data } = await axios.post("http://localhost:4000/api/v1/notice", {
-        title,
-        startDate,
-        endDate,
-      });
+      const { data } = await axios.post(
+        "https://nihareeka-college.herokuapp.com/api/v1/notice",
+        {
+          title,
+          startDate,
+          endDate,
+        }
+      );
       try {
         console.log(data);
         setRender(!render);

@@ -8,7 +8,7 @@ const CSIT = () => {
   useEffect(() => {
     const fetchData = async () => {
       const { data } = await axios.get(
-        "http://localhost:4000/api/v1/gallery/faculty/csit"
+        "https://nihareeka-college.herokuapp.com/api/v1/gallery/faculty/csit"
       );
       try {
         console.log(data);

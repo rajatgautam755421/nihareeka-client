@@ -99,3 +99,15 @@
     padding: 25px;
   }
 }
+
+@media screen and (max-width: 1000px) {
+  .footer__bottom__last {
+    height: 60px;
+  }
+}
+
+@media screen and (min-width: 1001px) {
+  .footer__bottom__last {
+    display: none;
+  }
+}

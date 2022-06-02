@@ -31,6 +31,12 @@
   }
 }
 
+@media screen and (max-width: 1000px) {
+  .news__events__image__1 {
+    height: 200px !important;
+  }
+}
+
 .br2 {
   border: 1px solid orange;
   border-image: url("https://img00.deviantart.net/feb2/i/2008/309/e/5/border_lineart_8_by_inspyretash_stock.jpg")

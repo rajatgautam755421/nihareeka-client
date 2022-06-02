@@ -1,0 +1,22 @@
+@media screen and (min-width: 1001px) {
+  .noti__main__div__mobile {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .noti__main__div__mobile {
+    width: 90%;
+    height: 90vh;
+    position: absolute;
+    margin: 0px auto;
+    display: flex;
+    justify-content: center;
+    top: 20px;
+    background-color: white;
+    border-radius: 14px;
+    box-shadow: 1px 1px 10px #837d7d, -1px -1px 7px #ffffff;
+    color: rgb(231, 224, 224);
+    z-index: 100 !important;
+  }
+}

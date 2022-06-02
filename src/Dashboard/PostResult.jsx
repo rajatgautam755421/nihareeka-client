@@ -12,11 +12,14 @@ const PostResult = ({ fetch3, setFetch3 }) => {
     if (title === "" || link === "" || faculty === "") {
       toast.error("Fields Are Empty");
     } else {
-      const { data } = await axios.post("http://localhost:4000/api/v1/result", {
-        title,
-        faculty,
-        link,
-      });
+      const { data } = await axios.post(
+        "https://nihareeka-college.herokuapp.com/api/v1/result",
+        {
+          title,
+          faculty,
+          link,
+        }
+      );
       try {
         console.log(data);
         toast.success("Result Posted Successfully");

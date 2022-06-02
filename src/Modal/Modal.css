@@ -1,0 +1,25 @@
+.modal__close__main {
+  cursor: pointer !important;
+  width: 30px !important;
+  height: 30px !important;
+}
+.modal__close__main__div {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+
+.modal__close__main:hover {
+  animation: slidein 1s ease-in-out;
+  color: red;
+}
+
+@keyframes slidein {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,26 @@
+.add__us__main__button__accept {
+  border: 2px solid green !important;
+  background-color: transparent;
+  color: black;
+  margin-bottom: 20px;
+}
+
+.add__us__main__button__accept:hover {
+  background-color: green !important;
+  color: white;
+  border: none;
+}
+
+.add__us__main__button__reject {
+  border: 2px solid red !important;
+  background-color: transparent;
+  color: black;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+.add__us__main__button__reject:hover {
+  background-color: red !important;
+  color: white;
+  border: none;
+}

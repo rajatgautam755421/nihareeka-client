@@ -2,13 +2,16 @@ import React, { useState } from "react";
 import DeleteIcon from "@mui/icons-material/Delete";
 import axios from "axios";
 import { toast } from "react-toastify";
+import { Tooltip } from "@mui/material";
 
 const NoticeData = ({ value, setRefresh, refresh }) => {
   const [loading, setLoading] = useState(false);
   const handleDelete = async () => {
     setLoading(true);
     const { data } = await axios.delete(
-      `http://localhost:4000/api/v1/notice/${value ? value._id : null}`
+      `https://nihareeka-college.herokuapp.com/api/v1/notice/${
+        value ? value._id : null
+      }`
     );
     try {
       console.log(data);
@@ -33,11 +36,13 @@ const NoticeData = ({ value, setRefresh, refresh }) => {
           {" "}
           <button>
             {" "}
-            <DeleteIcon
-              fontSize="small"
-              style={{ color: "#d11a2a", marginLeft: "15px" }}
-              onClick={handleDelete}
-            />
+            <Tooltip title="Delete">
+              <DeleteIcon
+                fontSize="small"
+                style={{ color: "#d11a2a", marginLeft: "15px" }}
+                onClick={handleDelete}
+              />
+            </Tooltip>
           </button>{" "}
         </td>
       </tr>

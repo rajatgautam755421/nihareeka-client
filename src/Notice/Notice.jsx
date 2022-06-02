@@ -8,7 +8,9 @@ const Notice = () => {
   const [error, setError] = useState(false);
   useEffect(() => {
     const fetchData = async () => {
-      const { data } = await axios.get("http://localhost:4000/api/v1/notice");
+      const { data } = await axios.get(
+        "https://nihareeka-college.herokuapp.com/api/v1/notice"
+      );
       try {
         console.log(data);
         setNotices(data);

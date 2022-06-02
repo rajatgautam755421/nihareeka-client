@@ -8,7 +8,7 @@ const BBS = () => {
   useEffect(() => {
     const fetchData = async () => {
       const { data } = await axios.get(
-        "http://localhost:4000/api/v1/gallery/faculty/bbs"
+        "https://nihareeka-college.herokuapp.com/api/v1/gallery/faculty/bbs"
       );
       try {
         console.log(data);

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Dashboard.css";
 import DashboardIcon from "@mui/icons-material/Dashboard";
 import Table from "./Table/Table";
@@ -18,12 +18,28 @@ import PostAddIcon from "@mui/icons-material/PostAdd";
 import DeleteResult from "./Table/DeleteResult";
 import EnentsTable from "./Table/EnentsTable.jsx";
 import EventIcon from "@mui/icons-material/Event";
-
+import axios from "axios";
+import Admission from "./Table/Admission";
+import FormatListNumberedIcon from "@mui/icons-material/FormatListNumbered";
 const Dashboard = () => {
   const [render, setRender] = useState(false);
   const [fetch1, setFetch] = useState(false);
   const [fetch3, setFetch3] = useState(false);
-  console.log(render);
+  const [fetch4, setFetch4] = useState(false);
+
+  useEffect(() => {
+    const handleClick = async () => {
+      const { data } = await axios.put(
+        `https://nihareeka-college.herokuapp.com/api/v1/notification/false`
+      );
+      try {
+        console.log(data);
+      } catch (error) {
+        console.log(error.message);
+      }
+    };
+    handleClick();
+  }, []);
   return (
     <>
       <div className="container-fluid">
@@ -78,7 +94,7 @@ const Dashboard = () => {
               <CollectionsIcon fontSize="large" style={{ color: "#390081" }} />{" "}
               <b>Event Updates</b>
             </h4>
-            <UpdateEvent />
+            <UpdateEvent fetch4={fetch4} setFetch4={setFetch4} />
           </div>
         </div>
         <div className="row">
@@ -130,9 +146,19 @@ const Dashboard = () => {
               <EventIcon fontSize="large" style={{ color: "#390081" }} />{" "}
               <b>All Events</b>
             </h4>
-            <EnentsTable />
+            <EnentsTable fetch4={fetch4} setFetch4={setFetch4} />
           </div>
         </div>
+      </div>
+      <div className="container">
+        <h4 style={{ textAlign: "center", color: "#D90081", padding: "40px" }}>
+          <FormatListNumberedIcon
+            fontSize="large"
+            style={{ color: "#390081" }}
+          />{" "}
+          <b>All Online Admission Requests</b>
+        </h4>
+        <Admission />
       </div>
     </>
   );

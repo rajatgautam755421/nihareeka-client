@@ -19,7 +19,7 @@ const Footer = () => {
     } else {
       try {
         const { data } = await axios.post(
-          "http://localhost:4000/api/v1/newsletter",
+          "https://nihareeka-college.herokuapp.com/api/v1/newsletter",
           { email }
         );
         console.log(data);
@@ -50,10 +50,10 @@ const Footer = () => {
             <div className="col-md-4 col-12" style={{ marginTop: "30px" }}>
               <SubFooter
                 heading="Quick Contact"
-                link1="Nihareeka-College@gmail.com"
-                link2="021-462086"
-                link3="Biratnagar-9,Bargachhi"
-                link4="6:00 AM - 3:00 PM"
+                link1="nihareekacollegebrt@gmail.com"
+                link2="021-512863 , 021-512864"
+                link3="Chadani Marg,Bargachhi"
+                link4="6:15 AM - 12:00 PM"
                 linkto5=""
               />{" "}
             </div>
@@ -170,6 +170,7 @@ const Footer = () => {
               Rajbanshi.
             </span>
           </div>
+          <div className="container-fluid footer__bottom__last"></div>
         </footer>
       </div>
     </>

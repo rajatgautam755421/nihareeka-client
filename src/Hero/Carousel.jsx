@@ -21,10 +21,8 @@ const Carousel = () => {
             />
             <div className="row">
               <div className="col">
-                <div className="carousel-caption  d-md-block image-title ">
-                  <h5 className="Title">
-                    Well trained teachers and Friendly environment
-                  </h5>
+                <div className="carousel-caption  d-md-block  artigo_nome  image-title ">
+                  <h3>Well Trained Teacher with well furnished classes.</h3>
                 </div>
               </div>
             </div>
@@ -37,10 +35,8 @@ const Carousel = () => {
             />{" "}
             <div className="row">
               <div className="col">
-                <div className="carousel-caption  d-md-block image-title  bordercss">
-                  <h5 className="Title">
-                    Nihareeka is No. 1 college in Provience 1
-                  </h5>
+                <div className="carousel-caption  d-md-block  artigo_nome  image-title ">
+                  <h3> Nihareeka is No. 1 college in Provience 1</h3>
                 </div>
               </div>
             </div>
@@ -53,10 +49,8 @@ const Carousel = () => {
             />{" "}
             <div className="row">
               <div className="col">
-                <div className="carousel-caption  d-md-block image-title  bordercss">
-                  <h5 className="Title">
-                    Leading IT college in Estern Region of Nepal
-                  </h5>
+                <div className="carousel-caption  d-md-block  artigo_nome  image-title ">
+                  <h3> Leading IT college in Estern Region of Nepal</h3>
                 </div>
               </div>
             </div>

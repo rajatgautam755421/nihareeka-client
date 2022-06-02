@@ -101,6 +101,85 @@ const CareerDetails = ({ courseName }) => {
             </div>
           )
         : null}
+      {courseName
+        ? courseName === "BIM" && (
+            <div className="container" style={{ marginTop: "40px" }}>
+              <div className="row">
+                <div className="col-md-4">
+                  <div className="container career__main__col">
+                    <CheckCircleOutlinedIcon className="requirements__main__icon" />
+                    <h5>Software Developer</h5>
+                  </div>
+                  <div className="container career__main__col">
+                    <CheckCircleOutlinedIcon className="requirements__main__icon" />
+                    <h5>Technical Support</h5>
+                  </div>
+                  <div className="container career__main__col">
+                    <CheckCircleOutlinedIcon className="requirements__main__icon" />
+                    <h5>IT Analyst</h5>
+                  </div>
+                  <div className="container career__main__col">
+                    <CheckCircleOutlinedIcon className="requirements__main__icon" />
+                    <h5>Web Developer</h5>
+                  </div>
+                  <div className="container career__main__col">
+                    <CheckCircleOutlinedIcon className="requirements__main__icon" />
+                    <h5>Junior Analyst</h5>
+                  </div>
+                  <div className="container career__main__col">
+                    <CheckCircleOutlinedIcon className="requirements__main__icon" />
+                    <h5>Computer Support Service Specialist</h5>
+                  </div>
+                  <div className="container career__main__col">
+                    <CheckCircleOutlinedIcon className="requirements__main__icon" />
+                    <h5>Software Publisher</h5>
+                  </div>
+                </div>
+                <div className="col-md-8" style={{ marginTop: "20px" }}>
+                  <img src={Image} alt="" srcset="" />
+                </div>
+              </div>
+            </div>
+          )
+        : null}
+      {courseName
+        ? courseName === "MBS" && (
+            <div className="container" style={{ marginTop: "40px" }}>
+              <div className="row">
+                <div className="col-md-4">
+                  <div className="container career__main__col">
+                    <CheckCircleOutlinedIcon className="requirements__main__icon" />
+                    <h5>Accountant</h5>
+                  </div>
+                  <div className="container career__main__col">
+                    <CheckCircleOutlinedIcon className="requirements__main__icon" />
+                    <h5>Banker</h5>
+                  </div>
+                  <div className="container career__main__col">
+                    <CheckCircleOutlinedIcon className="requirements__main__icon" />
+                    <h5>Trade Analyst</h5>
+                  </div>
+                  <div className="container career__main__col">
+                    <CheckCircleOutlinedIcon className="requirements__main__icon" />
+                    <h5>Data Analyst</h5>
+                  </div>
+                  <div className="container career__main__col">
+                    <CheckCircleOutlinedIcon className="requirements__main__icon" />
+                    <h5>Junior Analyst</h5>
+                  </div>
+
+                  <div className="container career__main__col">
+                    <CheckCircleOutlinedIcon className="requirements__main__icon" />
+                    <h5>Publisher</h5>
+                  </div>
+                </div>
+                <div className="col-md-8" style={{ marginTop: "20px" }}>
+                  <img src={Image} alt="" srcset="" />
+                </div>
+              </div>
+            </div>
+          )
+        : null}
 
       {courseName
         ? courseName === "BHM" && (

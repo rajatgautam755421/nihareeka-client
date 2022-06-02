@@ -2,14 +2,17 @@ import React from "react";
 import DeleteIcon from "@mui/icons-material/Delete";
 import axios from "axios";
 import { toast } from "react-toastify";
+import { Tooltip } from "@mui/material";
 
-const TableData = ({ value, setClicked }) => {
+const TableData = ({ value, setClicked, clicked }) => {
   const handleClick = async () => {
     const { data } = await axios.delete(
-      `http://localhost:4000/api/v1/contact/${value ? value._id : null}`
+      `https://nihareeka-college.herokuapp.com/api/v1/contact/${
+        value ? value._id : null
+      }`
     );
     try {
-      setClicked(true);
+      setClicked(!clicked);
       console.log(data);
       toast.info(`${value ? value.email : null}'s Feedback Has Been Deleted `);
     } catch (error) {
@@ -26,11 +29,13 @@ const TableData = ({ value, setClicked }) => {
           {" "}
           <button>
             {" "}
-            <DeleteIcon
-              fontSize="small"
-              style={{ color: "#d11a2a", marginLeft: "15px" }}
-              onClick={handleClick}
-            />
+            <Tooltip title="Delete">
+              <DeleteIcon
+                fontSize="small"
+                style={{ color: "#d11a2a", marginLeft: "15px" }}
+                onClick={handleClick}
+              />
+            </Tooltip>
           </button>{" "}
         </td>
       </tr>

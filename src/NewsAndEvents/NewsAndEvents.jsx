@@ -11,7 +11,9 @@ const NewsAndEvents = () => {
   const [notices, setNotices] = useState([]);
   useEffect(() => {
     const fetchData = async () => {
-      const { data } = await axios.get("http://localhost:4000/api/v1/events");
+      const { data } = await axios.get(
+        "https://nihareeka-college.herokuapp.com/api/v1/events"
+      );
       try {
         console.log(data);
         setNotices(data);

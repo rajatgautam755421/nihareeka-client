@@ -1,33 +1,34 @@
 import axios from "axios";
 import React, { useState } from "react";
 import { toast } from "react-toastify";
+import Loader from "../Loader";
 import "./Dashboard.css";
 
 const UpdateGallery = ({ setFetch, fetch1 }) => {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [faculty, setFaculty] = useState("csit");
+  const [loading, setLoading] = useState(false);
   const [pic, setPic] = useState("");
 
   const postDetails = (pics) => {
     if (pics === undefined) {
+      toast.error("Invalid Image");
       return;
     }
-
     const data = new FormData();
     data.append("file", pics);
 
-    data.append("upload_preset", "ml_default");
+    data.append("upload_preset", "zfwzbdlg");
 
-    data.append("cloud_name", "mechi-pharma1233");
+    data.append("cloud_name", "dpwgvr1b7");
 
-    fetch("https://api.cloudinary.com/v1_1/mechi-pharma1233/image/upload", {
+    fetch("https://api.cloudinary.com/v1_1/dpwgvr1b7/image/upload", {
       method: "post",
       body: data,
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data.url.toString());
         setPic(data.url.toString());
         console.log(pic);
       })
@@ -37,12 +38,15 @@ const UpdateGallery = ({ setFetch, fetch1 }) => {
   };
 
   const handleClick = async (e) => {
+    setLoading(true);
     e.preventDefault();
-    if (title === "" || description === "" || faculty === "" || pic === "") {
+    if (title === "" || description === "" || faculty === "") {
       toast.error("Fields Are Empty");
+      setLoading(false);
     } else {
+      setLoading(true);
       const { data } = await axios.post(
-        "http://localhost:4000/api/v1/gallery",
+        "https://nihareeka-college.herokuapp.com/api/v1/gallery",
         {
           pic,
           title,
@@ -51,21 +55,23 @@ const UpdateGallery = ({ setFetch, fetch1 }) => {
         }
       );
       try {
+        setLoading(true);
         console.log(data);
         setFetch(!fetch1);
-        setPic("");
-        setFaculty("");
+        toast.success("Gallery Image Is Successfully Posted");
         setDescription("");
         setTitle("");
-        toast.success("Gallery Image Is Successfully Posted");
+        setLoading(false);
       } catch (error) {
         console.log(error.message);
+        setLoading(false);
       }
     }
   };
   console.log(faculty);
   return (
     <>
+      {loading && <Loader />}
       <section className=" main__secction1">
         <div className="w-1/1 flex  overflow-hidden ">
           <div
@@ -89,6 +95,25 @@ const UpdateGallery = ({ setFetch, fetch1 }) => {
               <div>
                 <div>
                   <form>
+                    {/* Input File */}
+                    <div class="mb-3">
+                      <label
+                        htmlFor="email"
+                        className="block text-sm font-medium text-neutral-600"
+                      >
+                        {" "}
+                        Choose Image{" "}
+                      </label>
+                      <input
+                        class="form-control"
+                        type="file"
+                        id="formFile"
+                        accept="image/*"
+                        onChange={(e) => postDetails(e.target.files[0])}
+                        style={{ marginTop: "6px" }}
+                      />
+                    </div>
+
                     <div>
                       <label
                         htmlFor="email"
@@ -192,28 +217,9 @@ const UpdateGallery = ({ setFetch, fetch1 }) => {
                       </div>
                     </div>
 
-                    {/* Input File */}
-                    <div class="mb-3">
-                      <label
-                        htmlFor="email"
-                        className="block text-sm font-medium text-neutral-600"
-                      >
-                        {" "}
-                        Choose Image{" "}
-                      </label>
-                      <input
-                        class="form-control"
-                        type="file"
-                        id="formFile"
-                        accept="image/*"
-                        onChange={(e) => postDetails(e.target.files[0])}
-                        style={{ marginTop: "6px" }}
-                      />
-                    </div>
-
                     <div>
                       <button
-                        className=" bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg contact__us__main__button"
+                        className=" bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg contact__us__main__button mt-4"
                         onClick={handleClick}
                       >
                         Upload
