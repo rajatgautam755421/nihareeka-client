@@ -1,5 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import "./News.css";
 
 const News = () => {
   const [events, setEvents] = useState([]);
@@ -42,8 +44,15 @@ const News = () => {
                   href="#link"
                   className="block text-gray-900 font-bold text-2xl mb-2 hover:text-pink-600 transition duration-500 ease-in-out"
                 >
-                  {events[0] ? events[0].title : null}
+                  <Link
+                    to="/news-event"
+                    style={{ color: "black" }}
+                    className="main__text__events"
+                  >
+                    {events[0] ? events[0].title : null}
+                  </Link>
                 </a>
+
                 <p className="text-gray-700 text-base mt-2 mx-5 sm:mx-10">
                   {events[0] ? events[0].description : null}
                 </p>
@@ -61,12 +70,12 @@ const News = () => {
                   title="Nihareeka News&Activities"
                 ></div>
               </a>
-              <a
-                href="#link"
-                className="text-gray-900 inline-block font-semibold text-md my-2 hover:text-pink-600 transition duration-500 ease-in-out"
+              <Link
+                to="/news-event"
+                className="main__text__events text-gray-900 inline-block font-semibold text-md my-2 hover:text-pink-600 transition duration-500 ease-in-out"
               >
                 {events[1] ? events[1].title : null}
-              </a>
+              </Link>
             </div>
             <div className="mb-2">
               <a href="#link">
@@ -78,12 +87,12 @@ const News = () => {
                   title="Nihareeka News&Activities"
                 ></div>
               </a>
-              <a
-                href="#link"
-                className="text-gray-900 inline-block font-semibold text-md my-2 hover:text-pink-600 transition duration-500 ease-in-out"
+              <Link
+                to="/news-event"
+                className="main__text__events text-gray-900 inline-block font-semibold text-md my-2 hover:text-pink-600 transition duration-500 ease-in-out"
               >
                 {events[2] ? events[2].title : null}
-              </a>
+              </Link>
             </div>
             <div>
               <a href="#link">
@@ -95,12 +104,12 @@ const News = () => {
                   title="Nihareeka News&Activities"
                 ></div>
               </a>
-              <a
-                href="#link"
-                className="text-gray-900 inline-block font-semibold text-md my-2 hover:text-pink-600 transition duration-500 ease-in-out"
+              <Link
+                to="/news-event"
+                className="main__text__events text-gray-900 inline-block font-semibold text-md my-2 hover:text-pink-600 transition duration-500 ease-in-out"
               >
                 {events[3] ? events[3].title : null}
-              </a>
+              </Link>
             </div>
           </div>
         </div>

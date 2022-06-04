@@ -1,5 +1,5 @@
 import "./App.css";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import MessengerCustomerChat from "react-messenger-customer-chat/lib/MessengerCustomerChat";
 import Navbar from "./Navbar";
 import { Routes, Route } from "react-router-dom";
@@ -23,7 +23,6 @@ import NoPage from "./NoPage/NoPage";
 import FacultyMem from "./FacultyMem/FacultyMem";
 import TabNav from "./TabNav/TabNav";
 import Testing from "./Testing";
-import Form from "./Form/Form";
 import Details from "./Dashboard/Table/Details";
 import Print from "./Form/Print";
 import FormHome from "./Form/FormHome";

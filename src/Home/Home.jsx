@@ -97,7 +97,9 @@ const Home = (props) => {
               <Course
                 course={"BHM"}
                 desc="Bachelor of Hotel Management is an undergraduate program that produces technical and social skills based on hospitality industries and catering services."
-                image={BHM}
+                image={
+                  "https://res.cloudinary.com/mechi-pharma123/image/upload/v1654324660/Staff/WhatsApp_Image_2022-06-04_at_12.21.24_PM_x0tkhe.jpg"
+                }
                 time="4 years|8 semester"
               />
             </div>
@@ -115,7 +117,7 @@ const Home = (props) => {
               <Course
                 course={"BIM"}
                 desc="Bachelor of Information Management is four years program of Tribhuvan University that provides knowledge of Management Information and Communication System."
-                image={BIM}
+                image={BHM}
                 time="4 years|8 semester"
               />
             </div>
@@ -125,7 +127,9 @@ const Home = (props) => {
                 time="4 years"
                 desc="
 Bachelor of Business Studies or BBS is an undergraduate degree based on semesterwise program that provides in depth studies of business and helps to build the set of business related skills."
-                image={BBS}
+                image={
+                  "https://res.cloudinary.com/mechi-pharma123/image/upload/v1654325756/Faculty%20Members/WhatsApp_Image_2022-06-04_at_12.40.34_PM_m4cmji.jpg"
+                }
               />
             </div>
             <div className="beauty">
@@ -134,12 +138,15 @@ Bachelor of Business Studies or BBS is an undergraduate degree based on semester
                 course={"MBS"}
                 desc="Masters of Business Studies is a two years graduate level program in Business and Management."
                 time="2 years|4 semester"
-                image={MBS}
+                image={
+                  "https://res.cloudinary.com/mechi-pharma123/image/upload/v1654326053/Faculty%20Members/WhatsApp_Image_2022-06-04_at_12.45.34_PM_qubsqr.jpg"
+                }
               />
             </div>
           </Carousel>
         </div>
       </div>
+
       <Testimonials />
     </>
   );

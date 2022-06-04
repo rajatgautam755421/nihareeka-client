@@ -88,7 +88,7 @@ const Sidenav = ({ setOpenSideNav, setOpen }) => {
             "
                   >
                     <img
-                      src="https://nihareekacollege.edu.np/templates/nihareekacollegeofmanagementandit/images/title.png"
+                      src="https://res.cloudinary.com/mechi-pharma123/image/upload/v1654322885/Faculty%20Members/title_ab0jmz.png"
                       alt=""
                       srcset=""
                       className="college__sidenav"
@@ -311,32 +311,26 @@ const Sidenav = ({ setOpenSideNav, setOpen }) => {
                       </>
                     )}
 
-                    <li>
+                    <li
+                      style={{
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
+                      }}
+                    >
+                      <h1 style={{ fontSize: "18px" }}>Our Links : </h1>
                       <a
-                        style={{ textDecoration: "none", marginLeft: "35px" }}
-                        href=""
+                        style={{ textDecoration: "none" }}
+                        href="https://www.facebook.com/niharika.csit"
+                        target={"_blank"}
                       >
                         <FacebookIcon className="facebook" />
                       </a>
+
                       <a
-                        style={{ textDecoration: "none", marginLeft: "20px" }}
-                        href=""
-                      >
-                        <InstagramIcon className="insta" />
-                      </a>
-                      <a
-                        style={{ textDecoration: "none", marginLeft: "20px" }}
-                        href=""
-                        className="googleplus"
-                      >
-                        <GoogleIcon className="google" />
-                        <sup className="plus">
-                          <b>+</b>
-                        </sup>
-                      </a>
-                      <a
-                        style={{ textDecoration: "none", marginLeft: "20px" }}
-                        href=""
+                        style={{ textDecoration: "none" }}
+                        href="https://np.linkedin.com"
+                        target={"_blank"}
                       >
                         <LinkedInIcon className="linkedin" />{" "}
                       </a>

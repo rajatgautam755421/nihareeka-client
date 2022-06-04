@@ -15,14 +15,16 @@ const Carousel = () => {
         <div className="carousel-inner   ">
           <div className="carousel-item  active">
             <img
-              src={photo}
+              src={
+                "https://res.cloudinary.com/mechi-pharma123/image/upload/v1654325163/Faculty%20Members/WhatsApp_Image_2022-06-04_at_12.30.35_PM_g90xs4.jpg"
+              }
               className="d-block w-100 Image photobody "
               alt="..."
             />
             <div className="row">
               <div className="col">
                 <div className="carousel-caption  d-md-block  artigo_nome  image-title ">
-                  <h3>Well Trained Teacher with well furnished classes.</h3>
+                  <h3>Well Qualified Teacher with well furnished classes.</h3>
                 </div>
               </div>
             </div>
@@ -36,7 +38,7 @@ const Carousel = () => {
             <div className="row">
               <div className="col">
                 <div className="carousel-caption  d-md-block  artigo_nome  image-title ">
-                  <h3> Nihareeka is No. 1 college in Provience 1</h3>
+                  <h3>Best IT College in Province 1</h3>
                 </div>
               </div>
             </div>

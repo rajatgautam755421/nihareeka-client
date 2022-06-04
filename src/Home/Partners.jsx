@@ -29,7 +29,15 @@ const Partners = () => {
             <img
               className="hovereffect"
               alt=""
-              src="https://logos-world.net/wp-content/uploads/2021/08/Cisco-Logo.png"
+              src="https://res.cloudinary.com/mechi-pharma123/image/upload/v1654326218/Faculty%20Members/logo-dark_f8tdyz.png"
+            />{" "}
+          </div>
+          <div className="col-md-2 col-6 logobox">
+            {" "}
+            <img
+              className="hovereffect"
+              alt=""
+              src=" https://res.cloudinary.com/mechi-pharma123/image/upload/v1654326410/Faculty%20Members/taj-transparent-logo_xedfzl.png"
             />{" "}
           </div>
           <div className="col-md-2 col-6 logobox">
@@ -45,15 +53,7 @@ const Partners = () => {
             <img
               className="hovereffect"
               alt=""
-              src=" https://www.nepalitelecom.com/wp-content/uploads/2020/05/Nepal-Telecom.jpg"
-            />{" "}
-          </div>
-          <div className="col-md-2 col-6 logobox">
-            {" "}
-            <img
-              className="hovereffect"
-              alt=""
-              src=" https://www.unilevernepal.com/_nuxt/img/logo-static.0528ecc.svg"
+              src="https://res.cloudinary.com/mechi-pharma123/image/upload/v1654326342/Faculty%20Members/download_npzrq0.jpg"
             />{" "}
           </div>
         </div>

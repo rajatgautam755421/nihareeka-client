@@ -41,7 +41,7 @@ const Details = () => {
       const response = await axios.get(
         `http://128.199.18.46:4003/api/v1/mail/accept/${
           info ? info.email : null
-        }/Your Admission Request Has Been Accepted`
+        }/Your Admission Request Has Been Accepted.Please Contact Nihareeka College For More Information.`
       );
       try {
         toast.success(
@@ -64,7 +64,7 @@ const Details = () => {
       const response = await axios.get(
         `http://128.199.18.46:4003/api/v1/mail/reject/${
           info ? info.email : null
-        }/Your Admission Request Has Been Rejected`
+        }/Your Admission Request Has Been Rejected.Please Contact Nihareeka College For More Information.`
       );
       try {
         toast.success(
@@ -211,17 +211,22 @@ const Details = () => {
                     {info ? info.marksObtained : <Skeleton animation="wave" />}
                   </td>
                 </tr>
-
-                <tr>
-                  <th scope="row">11</th>
-                  <td>TU Entrance Roll No</td>
-                  <td>{info ? info.tuRoll : null}</td>
-                </tr>
-                <tr>
-                  <th scope="row">12</th>
-                  <td>TU Entrance Marks</td>
-                  <td>{info ? info.tuMarks : <Skeleton animation="wave" />}</td>
-                </tr>
+                {info.tuRoll && (
+                  <tr>
+                    <th scope="row">11</th>
+                    <td>TU Entrance Roll No</td>
+                    <td>{info ? info.tuRoll : null}</td>
+                  </tr>
+                )}
+                {info.tuMarks && (
+                  <tr>
+                    <th scope="row">12</th>
+                    <td>TU Entrance Marks</td>
+                    <td>
+                      {info ? info.tuMarks : <Skeleton animation="wave" />}
+                    </td>
+                  </tr>
+                )}
 
                 <tr>
                   <th scope="row">5</th>

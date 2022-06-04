@@ -9,6 +9,18 @@ const About = () => {
   return (
     <>
       <PageInfo title={"About Us"} Icon={HelpCenterOutlinedIcon} />
+      <h1
+        style={{
+          textAlign: "center",
+          color: "#EC008D",
+          marginTop: "40px",
+          fontSize: "30px",
+          marginBottom: "-5px",
+        }}
+      >
+        <span style={{ color: "#2C398D" }}>Click here,</span>
+        <b> to View our Brochures</b>
+      </h1>
       <div className="container about__main__col mt-4">
         <h5 className="about__heading__main">
           What is it like to study in one of the best management and IT colleges

@@ -595,7 +595,7 @@ const Form = ({ value }) => {
                               type="email"
                               autocomplete="email"
                               required=""
-                              placeholder="Enter your Email"
+                              placeholder="Please Enter A Genuine Email Address."
                               className="
                       contact__input__main
                       block
@@ -739,7 +739,7 @@ const Form = ({ value }) => {
                             className="block text-gray-600 m-2 text-xs text-sm font-medium text-neutral-600"
                           >
                             {" "}
-                            Marks obtained +2 or Equivalent:{" "}
+                            Marks obtained +2 or Equivalent(Optional):{" "}
                           </label>
 
                           <div className="mt-1">
@@ -749,7 +749,7 @@ const Form = ({ value }) => {
                               type="text"
                               autocomplete="marks"
                               required=""
-                              placeholder="Enter marks pbtained"
+                              placeholder="Enter marks obtained"
                               className="
                       contact__input__main
                       block

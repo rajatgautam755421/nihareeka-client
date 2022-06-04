@@ -99,3 +99,7 @@
   top: 500px;
   left: 200px;
 }
+
+.main__text__events:hover {
+  color: #d90081 !important;
+}

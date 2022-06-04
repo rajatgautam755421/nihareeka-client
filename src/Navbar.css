@@ -55,10 +55,9 @@
 }
 
 .college__logo__main {
-  width: 310px;
-  height: 30px;
+  width: 420px;
+  height: 35px;
   cursor: pointer;
-  margin-left: 20px;
 }
 
 @media screen and (max-width: 900px) {

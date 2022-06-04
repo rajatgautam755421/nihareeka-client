@@ -40,7 +40,7 @@ const Modal = () => {
           </div>
 
           <img
-            src="https://i.pinimg.com/736x/d3/e7/dd/d3e7dd2f2d02525ed29ab5ea8f425362.jpg"
+            src="https://res.cloudinary.com/mechi-pharma123/image/upload/v1654323437/Faculty%20Members/WhatsApp_Image_2022-06-04_at_11.11.20_AM_1_oap1hy.jpg"
             style={{ width: "100%", height: "300px" }}
           />
         </Modal1>

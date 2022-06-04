@@ -72,7 +72,7 @@ const Navbar = ({ clicked, setClicked }) => {
         <div className="container-fluid">
           <NavLink to="/" style={{ textDecoration: "none", border: "none" }}>
             <img
-              src="https://nihareekacollege.edu.np/templates/nihareekacollegeofmanagementandit/images/title.png"
+              src="https://res.cloudinary.com/mechi-pharma123/image/upload/v1654322885/Faculty%20Members/title_ab0jmz.png"
               alt=""
               srcset=""
               className="college__logo__main"
@@ -200,7 +200,7 @@ const Navbar = ({ clicked, setClicked }) => {
               </li>
               <li className="nav-item">
                 <NavLink className="nav-link " to="/online-admission">
-                  Online Admission
+                  Online Form
                 </NavLink>
               </li>
               <li className="nav-item">

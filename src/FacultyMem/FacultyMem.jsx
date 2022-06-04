@@ -8,73 +8,167 @@ const FacultyMem = () => {
   return (
     <>
       <PageInfo title={"Faculty Members"} Icon={PeopleAltOutlinedIcon} />
-
-      <section className="text-gray-600 body-font">
+      <h1 style={{ textAlign: "center", color: "#D90081", paddingTop: "40px" }}>
+        <b>Co-ordinators</b>
+      </h1>{" "}
+      <section className=" text-gray-600 body-font">
         <div className="container px-5 py-24 mx-auto">
           <div className="flex flex-wrap -m-4">
             <FacultyData
+              name={"Er. Hareram Kamat"}
+              image={
+                "https://res.cloudinary.com/mechi-pharma123/image/upload/v1654319881/Faculty%20Members/WhatsApp_Image_2022-06-04_at_11.02.35_AM_pgkvda.jpg"
+              }
+              desc="HOD"
+              post={"HOD"}
+            />
+            <FacultyData
+              name={"Krishna Dev Bahadar"}
+              image={
+                "https://res.cloudinary.com/mechi-pharma123/image/upload/v1654320183/Faculty%20Members/WhatsApp_Image_2022-06-04_at_11.07.52_AM_kyi6da.jpg"
+              }
+              desc="BIM Co-ordinator"
+              post={"Co-ordinator"}
+            />
+            <FacultyData
               name={"Ujjwal Rijal"}
               image={
-                "https://scontent.fbir1-1.fna.fbcdn.net/v/t39.30808-6/270624940_976039479690661_6559885771473642605_n.jpg?_nc_cat=110&ccb=1-6&_nc_sid=09cbfe&_nc_ohc=29jHtMNlsUMAX81ceoU&tn=66lPQ8t7KYrn0e9f&_nc_ht=scontent.fbir1-1.fna&oh=00_AT_RICW90aY0mZq0b4Zm88djb-zdH_RCtws1_ssFBz9Svw&oe=627D50FD"
+                "https://res.cloudinary.com/mechi-pharma123/image/upload/v1654319621/Faculty%20Members/ujjwal_zaf2up.jpg"
               }
-              desc="He is a HOD of BCA faculty Nihareeka"
-              post={"HOD"}
+              desc="BCA Co-ordinator"
+              post={"Co-ordinator"}
+            />
+            <FacultyData
+              name={"Jiwan Dhamala"}
+              image={
+                "https://res.cloudinary.com/mechi-pharma123/image/upload/v1654319935/Faculty%20Members/WhatsApp_Image_2022-06-04_at_11.03.47_AM_txq2jo.jpg"
+              }
+              desc="BBS Co-ordinator"
+              post={"Co-ordinator"}
+            />
+          </div>
+        </div>
+      </section>{" "}
+      <h1 style={{ textAlign: "center", color: "#D90081" }}>
+        <b>Lecturers</b>
+      </h1>{" "}
+      <section className="mb-5 text-gray-600 body-font">
+        <div className="container px-5 py-24 mx-auto">
+          <div className="flex flex-wrap -m-4">
+            <FacultyData
+              name={"Er. Hareram Kamat"}
+              image={
+                "https://res.cloudinary.com/mechi-pharma123/image/upload/v1654319881/Faculty%20Members/WhatsApp_Image_2022-06-04_at_11.02.35_AM_pgkvda.jpg"
+              }
+            />
+            <FacultyData
+              name={"Krishna Dev Bahadar"}
+              image={
+                "https://res.cloudinary.com/mechi-pharma123/image/upload/v1654320183/Faculty%20Members/WhatsApp_Image_2022-06-04_at_11.07.52_AM_kyi6da.jpg"
+              }
+            />
+            <FacultyData
+              name={"Ujjwal Rijal"}
+              image={
+                "https://res.cloudinary.com/mechi-pharma123/image/upload/v1654319621/Faculty%20Members/ujjwal_zaf2up.jpg"
+              }
+            />
+            <FacultyData
+              name={"Jiwan Dhamala"}
+              image={
+                "https://res.cloudinary.com/mechi-pharma123/image/upload/v1654319935/Faculty%20Members/WhatsApp_Image_2022-06-04_at_11.03.47_AM_txq2jo.jpg"
+              }
             />
             <FacultyData
               name={"Mahesh Nepal"}
               image={
-                "https://scontent.fbir1-1.fna.fbcdn.net/v/t1.6435-1/90553034_2838087862945728_4244736094400151552_n.jpg?stp=c0.0.200.200a_dst-jpg_p200x200&_nc_cat=109&ccb=1-6&_nc_sid=7206a8&_nc_ohc=y5fyMy4yJnkAX_kvN02&_nc_ht=scontent.fbir1-1.fna&oh=00_AT92-r-k46L7L4NMJDdMw9Yju1e62ZOP2B07dXmHOoLuUw&oe=629F01C9"
+                "https://res.cloudinary.com/mechi-pharma123/image/upload/v1654319642/Faculty%20Members/mahesh_hyelnz.jpg"
               }
-              desc="He is a HOD of BCA faculty Nihareeka"
-              post={"HOD"}
             />
             <FacultyData
-              name={"Ujjwal Rijal"}
+              name={"Ankit Taparia"}
               image={
-                "https://scontent.fbir1-1.fna.fbcdn.net/v/t39.30808-6/270624940_976039479690661_6559885771473642605_n.jpg?_nc_cat=110&ccb=1-6&_nc_sid=09cbfe&_nc_ohc=29jHtMNlsUMAX81ceoU&tn=66lPQ8t7KYrn0e9f&_nc_ht=scontent.fbir1-1.fna&oh=00_AT_RICW90aY0mZq0b4Zm88djb-zdH_RCtws1_ssFBz9Svw&oe=627D50FD"
+                "https://res.cloudinary.com/mechi-pharma123/image/upload/v1654320871/Faculty%20Members/ankit_yck8wx.jpg"
               }
-              desc="He is a HOD of BIT faculty Nihareeka"
-              post={"HOD"}
             />
             <FacultyData
-              name={"Ujjwal Rijal"}
+              name={"Sandrab Neupane"}
               image={
-                "https://scontent.fbir1-1.fna.fbcdn.net/v/t39.30808-6/270624940_976039479690661_6559885771473642605_n.jpg?_nc_cat=110&ccb=1-6&_nc_sid=09cbfe&_nc_ohc=29jHtMNlsUMAX81ceoU&tn=66lPQ8t7KYrn0e9f&_nc_ht=scontent.fbir1-1.fna&oh=00_AT_RICW90aY0mZq0b4Zm88djb-zdH_RCtws1_ssFBz9Svw&oe=627D50FD"
+                "https://res.cloudinary.com/mechi-pharma123/image/upload/v1654320933/Faculty%20Members/sandrav_omqzhu.jpg"
               }
-              desc="He is a HOD of BCA faculty Nihareeka"
-              post={"HOD"}
             />
             <FacultyData
-              name={"Ujjwal Rijal"}
+              name={"Ram Pd. Pokharel"}
               image={
-                "https://scontent.fbir1-1.fna.fbcdn.net/v/t39.30808-6/270624940_976039479690661_6559885771473642605_n.jpg?_nc_cat=110&ccb=1-6&_nc_sid=09cbfe&_nc_ohc=29jHtMNlsUMAX81ceoU&tn=66lPQ8t7KYrn0e9f&_nc_ht=scontent.fbir1-1.fna&oh=00_AT_RICW90aY0mZq0b4Zm88djb-zdH_RCtws1_ssFBz9Svw&oe=627D50FD"
+                "https://res.cloudinary.com/mechi-pharma123/image/upload/v1654320997/Faculty%20Members/Ram_sir_zkykpv.jpg"
               }
-              desc="He is a HOD of BCA faculty Nihareeka"
-              post={"HOD"}
             />
             <FacultyData
-              name={"Ujjwal Rijal"}
+              name={"Kishor Giri"}
               image={
-                "https://scontent.fbir1-1.fna.fbcdn.net/v/t39.30808-6/270624940_976039479690661_6559885771473642605_n.jpg?_nc_cat=110&ccb=1-6&_nc_sid=09cbfe&_nc_ohc=29jHtMNlsUMAX81ceoU&tn=66lPQ8t7KYrn0e9f&_nc_ht=scontent.fbir1-1.fna&oh=00_AT_RICW90aY0mZq0b4Zm88djb-zdH_RCtws1_ssFBz9Svw&oe=627D50FD"
+                "https://res.cloudinary.com/mechi-pharma123/image/upload/v1654321035/Faculty%20Members/Kishor_ty0r4c.jpg"
               }
-              desc="He is a HOD of BCA faculty Nihareeka"
-              post={"HOD"}
             />
             <FacultyData
-              name={"Ujjwal Rijal"}
+              name={"Keshav Kharal"}
               image={
-                "https://scontent.fbir1-1.fna.fbcdn.net/v/t39.30808-6/270624940_976039479690661_6559885771473642605_n.jpg?_nc_cat=110&ccb=1-6&_nc_sid=09cbfe&_nc_ohc=29jHtMNlsUMAX81ceoU&tn=66lPQ8t7KYrn0e9f&_nc_ht=scontent.fbir1-1.fna&oh=00_AT_RICW90aY0mZq0b4Zm88djb-zdH_RCtws1_ssFBz9Svw&oe=627D50FD"
+                "https://res.cloudinary.com/mechi-pharma123/image/upload/v1654321097/Faculty%20Members/keshav_sir_flf82q.jpg"
               }
-              desc="He is a HOD of BCA faculty Nihareeka"
-              post={"HOD"}
             />
             <FacultyData
-              name={"Ujjwal Rijal"}
+              name={"Sandip Mishra"}
               image={
-                "https://scontent.fbir1-1.fna.fbcdn.net/v/t39.30808-6/270624940_976039479690661_6559885771473642605_n.jpg?_nc_cat=110&ccb=1-6&_nc_sid=09cbfe&_nc_ohc=29jHtMNlsUMAX81ceoU&tn=66lPQ8t7KYrn0e9f&_nc_ht=scontent.fbir1-1.fna&oh=00_AT_RICW90aY0mZq0b4Zm88djb-zdH_RCtws1_ssFBz9Svw&oe=627D50FD"
+                "https://res.cloudinary.com/mechi-pharma123/image/upload/v1654321172/Faculty%20Members/sandip_idkeib.jpg"
               }
-              desc="He is a HOD of BCA faculty Nihareeka"
-              post={"HOD"}
+            />
+            <FacultyData name={"Sanu Koirala"} image={""} />
+            <FacultyData
+              name={"Alina Lamichhane"}
+              image={
+                "https://res.cloudinary.com/mechi-pharma123/image/upload/v1654321822/Faculty%20Members/WhatsApp_Image_2022-06-04_at_11.29.43_AM_sr6y4j.jpg"
+              }
+            />
+            <FacultyData
+              name={"Tanka Mahat"}
+              image={
+                "https://res.cloudinary.com/mechi-pharma123/image/upload/v1654321383/Faculty%20Members/anil_sandaliya_evhn2w.jpg"
+              }
+            />
+            <FacultyData
+              name={"Sanjay Mandal"}
+              image={
+                "https://res.cloudinary.com/mechi-pharma123/image/upload/v1654321434/Faculty%20Members/Sanjay_vxlsgw.jpg"
+              }
+            />
+            <FacultyData
+              name={"Kamal Kishore Shrivastav"}
+              image={
+                "https://res.cloudinary.com/mechi-pharma123/image/upload/v1654321559/Faculty%20Members/kamal_xtkyyj.jpg"
+              }
+            />
+            <FacultyData
+              name={"Nawal Kishore Shrivastav"}
+              image={
+                "https://res.cloudinary.com/mechi-pharma123/image/upload/v1654321633/Faculty%20Members/nawal_nple9j.jpg"
+              }
+            />{" "}
+            <FacultyData
+              name={"Jiwachha Shah"}
+              image={
+                "https://res.cloudinary.com/mechi-pharma123/image/upload/v1654321887/Faculty%20Members/WhatsApp_Image_2022-06-04_at_11.36.12_AM_bvhwii.jpg"
+              }
+            />
+            <FacultyData
+              name={"Nawajit Pradhan"}
+              image={
+                "https://res.cloudinary.com/mechi-pharma123/image/upload/v1654321956/Faculty%20Members/nawajit_cdrhoo.jpg"
+              }
+            />
+            <FacultyData
+              name={"Pankaj Bhattarai"}
+              image={
+                "https://res.cloudinary.com/mechi-pharma123/image/upload/v1654322133/Faculty%20Members/pankaj_zpjcmz.jpg"
+              }
             />
           </div>
         </div>
