@@ -22,6 +22,7 @@ const About = () => {
           <a
             href="https://drive.google.com/file/d/1ndx3UzfERPV6gq9ssUWtIs9mAQipjVzH/view?usp=drivesdk"
             target={"_blank"}
+            style={{ textDecoration: "none", cursor: "pointer" }}
           >
             Click here
           </a>
