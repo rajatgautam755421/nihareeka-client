@@ -204,13 +204,22 @@ const Details = () => {
                   <td>Email ID</td>
                   <td>{info ? info.email : <Skeleton animation="wave" />}</td>
                 </tr>
-                <tr>
-                  <th scope="row">10</th>
-                  <td>Marks Obtained +2 or Equivalent(In Grade/GPA/%)</td>
-                  <td>
-                    {info ? info.marksObtained : <Skeleton animation="wave" />}
-                  </td>
-                </tr>
+                {info
+                  ? info.marksObtained !== "0" && (
+                      <tr>
+                        <th scope="row">10</th>
+                        <td>Marks Obtained +2 or Equivalent(In Grade/GPA/%)</td>
+                        <td>
+                          {info ? (
+                            info.marksObtained
+                          ) : (
+                            <Skeleton animation="wave" />
+                          )}
+                        </td>
+                      </tr>
+                    )
+                  : null}
+
                 {info.tuRoll && (
                   <tr>
                     <th scope="row">11</th>

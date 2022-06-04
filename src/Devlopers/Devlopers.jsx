@@ -31,19 +31,20 @@ const Devlopers = () => {
                 <img
                   alt="team"
                   className="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center sm:mb-0 mb-4 faculty__members__image__main"
-                  src="https://scontent.fbir1-1.fna.fbcdn.net/v/t39.30808-6/241855550_229065692614371_7064837356271760728_n.jpg?_nc_cat=102&ccb=1-6&_nc_sid=09cbfe&_nc_ohc=Cs2YwRQEJOsAX9r65p9&_nc_ht=scontent.fbir1-1.fna&oh=00_AT_BRtN2nnpCMU9iaEt3gmlOoLVSY_Q1GwEjng7be1Q8Mw&oe=627A110C"
+                  src="https://res.cloudinary.com/mechi-pharma123/image/upload/v1654339019/Faculty%20Members/rajatgautam_y01rmn.jpg"
                 />
                 <div className="flex-grow sm:pl-8">
                   <h3 className="text-gray-900 mb-3">Rajat Gautam</h3>
                   <h2 className="title-font font-medium text-lg text-pink-500">
                     Developer
                   </h2>
-                  <p className="mb-4">
-                    DIY tote bag drinking vinegar cronut adaptogen squid fanny
-                    pack vaporware.
-                  </p>
+                  <p className="mb-4">MERN Stack Devloper.</p>
                   <span className="inline-flex">
-                    <a className="text-pink-500">
+                    <a
+                      className="text-pink-500"
+                      href="https://www.facebook.com/rajat.gautam.33821189/"
+                      target={"_blank"}
+                    >
                       <svg
                         fill="none"
                         stroke="currentColor"
@@ -90,7 +91,7 @@ const Devlopers = () => {
               <div className="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left">
                 <img
                   alt="team"
-                  src="https://scontent.fbir1-1.fna.fbcdn.net/v/t1.6435-9/89436754_2647674882140966_2218007809864237056_n.jpg?_nc_cat=100&ccb=1-6&_nc_sid=174925&_nc_ohc=TFGbBEP4FJ0AX9xcVbq&_nc_ht=scontent.fbir1-1.fna&oh=00_AT_87kN7vrrfHffVkz1bmgRhIUC6uJmiIH9w-QryIaewNQ&oe=629BCCFA"
+                  src="https://res.cloudinary.com/mechi-pharma123/image/upload/v1654339072/Faculty%20Members/samratojha_pp1o9q.jpg"
                   className="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center sm:mb-0 mb-4 faculty__members__image__main"
                 />
                 <div className="flex-grow sm:pl-8">
@@ -98,12 +99,13 @@ const Devlopers = () => {
                   <h2 className="title-font font-medium text-lg text-pink-500">
                     UI Developer
                   </h2>
-                  <p className="mb-4">
-                    DIY tote bag drinking vinegar cronut adaptogen squid fanny
-                    pack vaporware.
-                  </p>
+                  <p className="mb-4">MERN Stack Devloper.</p>
                   <span className="inline-flex">
-                    <a className="text-pink-500">
+                    <a
+                      className="text-pink-500"
+                      href="https://www.facebook.com/samrat.ojha.54"
+                      target={"_blank"}
+                    >
                       <svg
                         fill="none"
                         stroke="currentColor"
@@ -152,19 +154,20 @@ const Devlopers = () => {
                 <img
                   alt="team"
                   className="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center sm:mb-0 mb-4 faculty__members__image__main"
-                  src="https://scontent.fbir1-1.fna.fbcdn.net/v/t1.6435-9/53400544_601447973657815_2057514455494819840_n.jpg?_nc_cat=109&ccb=1-6&_nc_sid=19026a&_nc_ohc=SiZt2TENvVsAX8mvUzW&_nc_ht=scontent.fbir1-1.fna&oh=00_AT_SCuNg9vDzgTJQoLJSifEwMR59NNFJOpylDpfgvqVxEA&oe=6299FEC8"
+                  src="https://res.cloudinary.com/mechi-pharma123/image/upload/v1654339116/Faculty%20Members/amanraj_bjdae3.jpg"
                 />
                 <div className="flex-grow sm:pl-8">
                   <h3 className="text-gray-900 mb-3">Aman Rajbanshi</h3>
                   <h2 className="title-font font-medium text-lg text-pink-500">
-                    Chimkande
+                    Devloper
                   </h2>
-                  <p className="mb-4">
-                    Mero Kei Kaam Xaina.Ma Kei Gardina.I Only Watch Tiktok And
-                    Facebook Watch
-                  </p>
+                  <p className="mb-4">MERN Stack Devloper.</p>
                   <span className="inline-flex">
-                    <a className="text-pink-500">
+                    <a
+                      className="text-pink-500"
+                      href="https://www.facebook.com/rajwanc.aman"
+                      target={"_blank"}
+                    >
                       <svg
                         fill="none"
                         stroke="currentColor"

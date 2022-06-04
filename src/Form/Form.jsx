@@ -54,6 +54,7 @@ const Form = ({ value }) => {
           setLoading(true);
           try {
             setLoading(true);
+
             const { data } = await axios.post(
               "http://128.199.18.46:4003/api/v1/form",
               {
@@ -114,7 +115,6 @@ const Form = ({ value }) => {
         temporaryAddress === "" ||
         contactNumber === "" ||
         email === "" ||
-        marksObtained === "" ||
         sc === ""
       ) {
         toast.error("Fields Are Empty");
@@ -125,6 +125,7 @@ const Form = ({ value }) => {
           setLoading(true);
           try {
             setLoading(true);
+
             const { data } = await axios.post(
               "http://128.199.18.46:4003/api/v1/form",
               {
@@ -140,7 +141,7 @@ const Form = ({ value }) => {
                 temporaryAddress,
                 contactNumber,
                 email,
-                marksObtained,
+                marksObtained: marksObtained === "" ? "0" : marksObtained,
                 sc,
                 value,
               }

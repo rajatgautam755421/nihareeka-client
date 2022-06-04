@@ -65,12 +65,16 @@ const Sidenav = ({ setOpenSideNav, setOpen }) => {
                   className="close__sidenav"
                 />
               </div>
-              <div className="flex flex-col items-center flex-shrink-0 px-4">
-                <Link
-                  to="/about-us"
-                  className="px-2 text-left focus:outline-none"
-                  style={{ textDecoration: "none", color: "black" }}
-                >
+              <Link
+                to="/about-us"
+                className="px-2 text-left focus:outline-none"
+                style={{
+                  textDecoration: "none",
+                  color: "#2C499F",
+                  fontWeight: "500",
+                }}
+              >
+                <div className="flex flex-col items-center flex-shrink-0 px-4">
                   <h2
                     className="
               block
@@ -94,26 +98,26 @@ const Sidenav = ({ setOpenSideNav, setOpen }) => {
                       className="college__sidenav"
                     />
                   </h2>
-                </Link>
-                <button className="hidden rounded-lg focus:outline-none ">
-                  <svg
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                    className="w-6 h-6"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z"
-                      clipRule="evenodd"
-                    />
-                    <path
-                      fillRule="evenodd"
-                      d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                </button>
-              </div>
+                  <button className="hidden rounded-lg focus:outline-none ">
+                    <svg
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      className="w-6 h-6"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z"
+                        clipRule="evenodd"
+                      />
+                      <path
+                        fillRule="evenodd"
+                        d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                        clipRule="evenodd"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              </Link>
 
               <div className="flex flex-col flex-grow px-1 mt-3">
                 <nav className="flex-1 space-y-1 bg-neutral-800">
@@ -139,7 +143,11 @@ const Sidenav = ({ setOpenSideNav, setOpen }) => {
                   border-neutral-900
                   
                 "
-                        style={{ textDecoration: "none", color: "black" }}
+                        style={{
+                          textDecoration: "none",
+                          color: "#2C499F",
+                          fontWeight: "500",
+                        }}
                         white
                       >
                         <svg
@@ -159,7 +167,11 @@ const Sidenav = ({ setOpenSideNav, setOpen }) => {
                         <Link
                           className="ml-4"
                           to="/about-us"
-                          style={{ textDecoration: "none", color: "black" }}
+                          style={{
+                            textDecoration: "none",
+                            color: "#2C499F",
+                            fontWeight: "500",
+                          }}
                         >
                           {" "}
                           About
@@ -169,7 +181,11 @@ const Sidenav = ({ setOpenSideNav, setOpen }) => {
                     <li className="sidenav__li">
                       <Link
                         to="contact-us"
-                        style={{ textDecoration: "none", color: "black" }}
+                        style={{
+                          textDecoration: "none",
+                          color: "#2C499F",
+                          fontWeight: "500",
+                        }}
                         className="
                   inline-flex
                   items-center
@@ -207,7 +223,11 @@ const Sidenav = ({ setOpenSideNav, setOpen }) => {
                         </svg>
                         <span
                           className="ml-4"
-                          style={{ textDecoration: "none", color: "black" }}
+                          style={{
+                            textDecoration: "none",
+                            color: "#2C499F",
+                            fontWeight: "500",
+                          }}
                         >
                           Contact
                         </span>
@@ -218,7 +238,8 @@ const Sidenav = ({ setOpenSideNav, setOpen }) => {
                         to="/dashboard-login"
                         style={{
                           textDecoration: "none",
-                          color: "black",
+                          color: "#2C499F",
+                          fontWeight: "500",
                         }}
                         className="
                   inline-flex
@@ -257,7 +278,11 @@ const Sidenav = ({ setOpenSideNav, setOpen }) => {
                         </svg>
                         <span
                           className="ml-4"
-                          style={{ textDecoration: "none", color: "black" }}
+                          style={{
+                            textDecoration: "none",
+                            color: "#2C499F",
+                            fontWeight: "500",
+                          }}
                         >
                           Dashboard
                         </span>
@@ -290,7 +315,8 @@ const Sidenav = ({ setOpenSideNav, setOpen }) => {
             "
                             style={{
                               textDecoration: "none",
-                              color: "black",
+                              color: "#2C499F",
+                              fontWeight: "500",
                               cursor: "pointer",
                             }}
                             onClick={handleClick}
@@ -301,7 +327,11 @@ const Sidenav = ({ setOpenSideNav, setOpen }) => {
                             <a
                               className="ml-4"
                               to="/about-us"
-                              style={{ textDecoration: "none", color: "black" }}
+                              style={{
+                                textDecoration: "none",
+                                color: "#2C499F",
+                                fontWeight: "500",
+                              }}
                             >
                               {" "}
                               Logout
@@ -316,9 +346,12 @@ const Sidenav = ({ setOpenSideNav, setOpen }) => {
                         display: "flex",
                         justifyContent: "center",
                         alignItems: "center",
+                        marginTop: "20px",
                       }}
                     >
-                      <h1 style={{ fontSize: "18px" }}>Our Links : </h1>
+                      <h1 style={{ fontSize: "20px", marginTop: "10px" }}>
+                        Our Links :{" "}
+                      </h1>
                       <a
                         style={{ textDecoration: "none" }}
                         href="https://www.facebook.com/niharika.csit"

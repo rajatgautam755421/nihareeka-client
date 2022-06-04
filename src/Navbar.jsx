@@ -59,6 +59,11 @@ const Navbar = ({ clicked, setClicked }) => {
     }
   });
 
+  useEffect(() => {
+    setOpenSideNav(false);
+    setOpen(false);
+  }, [pathname]);
+
   return (
     <>
       {openSideNav && (
@@ -156,7 +161,12 @@ const Navbar = ({ clicked, setClicked }) => {
                 </ul>
               </li>
               <li className="nav-item">
-                <NavLink className="nav-link " to="/contact-us">
+                <NavLink
+                  className={({ isActive }) =>
+                    isActive ? "activee nav-link" : "inactive nav-link"
+                  }
+                  to="/contact-us"
+                >
                   Contact
                 </NavLink>
               </li>
@@ -199,17 +209,32 @@ const Navbar = ({ clicked, setClicked }) => {
                 </ul>
               </li>
               <li className="nav-item">
-                <NavLink className="nav-link " to="/online-admission">
+                <NavLink
+                  className={({ isActive }) =>
+                    isActive ? "activee nav-link" : "inactive nav-link"
+                  }
+                  to="/online-admission"
+                >
                   Online Form
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className="nav-link " to="/gallery">
+                <NavLink
+                  className={({ isActive }) =>
+                    isActive ? "activee nav-link" : "inactive nav-link"
+                  }
+                  to="/gallery"
+                >
                   Gallery
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className="nav-link " to="news-event">
+                <NavLink
+                  className={({ isActive }) =>
+                    isActive ? "activee nav-link" : "inactive nav-link"
+                  }
+                  to="news-event"
+                >
                   News And Events
                 </NavLink>
               </li>
