@@ -78,3 +78,8 @@
   padding: 15px;
   word-break: normal;
 }
+@media screen and (max-width: 750px) {
+  .carousel-item img {
+    min-height: 700px;
+  }
+}

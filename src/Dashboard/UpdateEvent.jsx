@@ -39,7 +39,7 @@ const UpdateEvent = ({ fetch4, setFetch4 }) => {
   const handleClick = async (e) => {
     setLoading(true);
     e.preventDefault();
-    if (title === "" || description === "" || category === "") {
+    if (title === "" || description === "" || category === "" || pic === "") {
       toast.error("Fields Are Empty");
       setLoading(false);
     } else {

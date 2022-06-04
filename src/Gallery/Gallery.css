@@ -196,7 +196,7 @@
 
 .gallery__main__image::before {
   content: "";
-  background-image: url("https://images.unsplash.com/photo-1582113888274-e33535ddb25d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80&fbclid=IwAR3-I0exCJUtRUUdV4aOMiplwm34PVMbLkpnKO0FOtgEtHTBrQ_DqbtdAuM");
+  background-image: url("https://images.unsplash.com/photo-1505664194779-8beaceb93744?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80");
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;

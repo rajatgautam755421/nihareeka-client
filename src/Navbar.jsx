@@ -100,7 +100,7 @@ const Navbar = ({ clicked, setClicked }) => {
                   aria-current="page"
                   to="/"
                   className={({ isActive }) =>
-                    isActive ? "active nav-link" : "inactive nav-link"
+                    isActive ? "activee nav-link" : "inactive nav-link"
                   }
                 >
                   Home

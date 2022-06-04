@@ -40,7 +40,7 @@ const UpdateGallery = ({ setFetch, fetch1 }) => {
   const handleClick = async (e) => {
     setLoading(true);
     e.preventDefault();
-    if (title === "" || description === "" || faculty === "") {
+    if (title === "" || description === "" || faculty === "" || pic === "") {
       toast.error("Fields Are Empty");
       setLoading(false);
     } else {

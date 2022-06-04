@@ -27,26 +27,30 @@ const Contact = ({ badge, setBadge }) => {
     if (name === "" || email === "" || message === "") {
       toast.error("Fields Cannot Be Empty");
     } else {
-      setLoading(true);
-      try {
-        const { data } = await axios.post(
-          "http://128.199.18.46:4003/api/v1/contact",
-          { name, email, message }
-        );
+      if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
         setLoading(true);
+        try {
+          const { data } = await axios.post(
+            "http://128.199.18.46:4003/api/v1/contact",
+            { name, email, message }
+          );
+          setLoading(true);
 
-        console.log(data);
-        toast.success(`${name} Your Feedback Is Successfully Recieved`);
-        setName("");
-        setEmail("");
-        setMessage("");
-        setLoading(false);
-        const response = await axios.put(
-          `http://128.199.18.46:4003/api/v1/notification/${request}`
-        );
-      } catch (error) {
-        toast.error("Network Error");
-        setLoading(false);
+          console.log(data);
+          toast.success(`${name} Your Feedback Is Successfully Recieved`);
+          setName("");
+          setEmail("");
+          setMessage("");
+          setLoading(false);
+          const response = await axios.put(
+            `http://128.199.18.46:4003/api/v1/notification/${request}`
+          );
+        } catch (error) {
+          toast.error("Network Error");
+          setLoading(false);
+        }
+      } else {
+        toast.error("Email must be a valid Email");
       }
     }
   };

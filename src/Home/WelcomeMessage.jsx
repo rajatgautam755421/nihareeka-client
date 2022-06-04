@@ -22,7 +22,7 @@ const WelcomeMessage = () => {
                 />
                 <div className="w-24 -mt-22 overflow-hidden border border-2 border-white rounded-full mx-auto bg-white">
                   <img
-                    src="https://scontent.fktm12-1.fna.fbcdn.net/v/t1.6435-1/102409472_3021721871229902_2953006342756319143_n.jpg?stp=dst-jpg_s200x200&_nc_cat=110&ccb=1-6&_nc_sid=7206a8&_nc_ohc=23iqUnz2BUIAX8Q8DRI&_nc_ht=scontent.fktm12-1.fna&oh=00_AT8s_nAW1BK4WdvWtu1oiHcEjUTVU4Z0ECH4PvWCL95pZQ&oe=62AC5DEB"
+                    src="https://res.cloudinary.com/mechi-pharma123/image/upload/v1654265140/Staff/amit_xlgfq2.jpg"
                     alt=""
                   />
                 </div>

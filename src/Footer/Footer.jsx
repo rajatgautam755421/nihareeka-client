@@ -7,7 +7,6 @@ import YouTubeIcon from "@mui/icons-material/YouTube";
 import SubFooter from "./SubFooter";
 import axios from "axios";
 import { toast } from "react-toastify";
-import ScrollToTop from "react-scroll-to-top";
 
 const Footer = () => {
   const [email, setEmail] = useState("");
@@ -17,17 +16,21 @@ const Footer = () => {
     if (email === "") {
       toast.error("Email Cannot Be Empty");
     } else {
-      try {
-        const { data } = await axios.post(
-          "http://128.199.18.46:4003/api/v1/newsletter",
-          { email }
-        );
-        console.log(data);
-        toast.success("Signup Successful");
-        setEmail("");
-      } catch (error) {
-        toast.error(error.response.data);
-        setEmail("");
+      if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
+        toast.error("Email must be a Valid Email");
+      } else {
+        try {
+          const { data } = await axios.post(
+            "http://128.199.18.46:4003/api/v1/newsletter",
+            { email }
+          );
+          console.log(data);
+          toast.success("Signup Successful");
+          setEmail("");
+        } catch (error) {
+          toast.error(error.response.data);
+          setEmail("");
+        }
       }
     }
   };
@@ -42,10 +45,6 @@ const Footer = () => {
           className=" mt-10"
           style={{ marginTop: "30px", marginLeft: "25px" }}
         >
-          <div>
-            <ScrollToTop smooth width="40" />
-          </div>
-
           <div className="row footer__row__main">
             <div className="col-md-4 col-12" style={{ marginTop: "30px" }}>
               <SubFooter
@@ -131,28 +130,19 @@ const Footer = () => {
               <div className="col-md-12 mb-12 social__media">
                 <h5 style={{ color: "white" }}>
                   Follow us on:
-                  <a href="#facebook">
+                  <a
+                    href="https://www.facebook.com/niharika.csit"
+                    target="_blank"
+                  >
                     <FacebookIcon
                       fontSize="large"
                       className="contact__facebook "
                     />
                   </a>
-                  <a href="#insta">
-                    <InstagramIcon
-                      fontSize="large"
-                      className="contact__Insta "
-                    />
-                  </a>
-                  <a href="#linkedIn">
+                  <a href="https://np.linkedin.com/" target="_blank">
                     <LinkedInIcon
                       fontSize="large"
                       className="contact__LinkedIn"
-                    />
-                  </a>
-                  <a href="#youtube">
-                    <YouTubeIcon
-                      fontSize="large"
-                      className="contact__Youtube"
                     />
                   </a>
                 </h5>
@@ -160,7 +150,7 @@ const Footer = () => {
             </div>
           </div>
           <div
-            className="footer-copyright text-center py-3"
+            className="mb-3 footer-copyright text-center py-3"
             style={{ backgroundColor: "#D90081", color: "white" }}
           >
             © 2022 Copyright :

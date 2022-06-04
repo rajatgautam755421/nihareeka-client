@@ -48,53 +48,57 @@ const Form = ({ value }) => {
       ) {
         toast.error("Fields Are Empty");
       } else {
-        setLoading(true);
-        try {
+        if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
+          toast.error("Email must be a valid Email");
+        } else {
           setLoading(true);
-          const { data } = await axios.post(
-            "http://128.199.18.46:4003/api/v1/form",
-            {
-              firstName,
-              middleName,
-              lastname,
-              faculty,
-              dateOfBirth,
-              fatherName,
-              motherName,
-              nationality,
-              permanentAddress,
-              temporaryAddress,
-              contactNumber,
-              email,
-              marksObtained,
-              tuMarks,
-              tuRoll,
-              sc,
-              value,
-            }
-          );
-          console.log(data);
-          toast.success(
-            "Congratulation Your Admission Request Is Recieved By Admin And Will Be Reviewed Soon"
-          );
-          setLoading(false);
-          setFirstName("");
-          setmiddleName("");
-          setlastname("");
-          setdateOfBirth("");
-          setfatherName("");
-          setmotherName("");
-          setpermanentAddress("");
-          settemporaryAddress("");
-          setcontactNumber("");
-          setemail("");
-          setmarksObtained("");
-          settuMarks("");
-          setsc("");
-          setTuroll("");
-        } catch (error) {
-          console.log(error.message);
-          setLoading(false);
+          try {
+            setLoading(true);
+            const { data } = await axios.post(
+              "http://128.199.18.46:4003/api/v1/form",
+              {
+                firstName,
+                middleName,
+                lastname,
+                faculty,
+                dateOfBirth,
+                fatherName,
+                motherName,
+                nationality,
+                permanentAddress,
+                temporaryAddress,
+                contactNumber,
+                email,
+                marksObtained,
+                tuMarks,
+                tuRoll,
+                sc,
+                value,
+              }
+            );
+            console.log(data);
+            toast.success(
+              "Congratulation Your Admission Request Is Recieved By Admin And Will Be Reviewed Soon"
+            );
+            setLoading(false);
+            setFirstName("");
+            setmiddleName("");
+            setlastname("");
+            setdateOfBirth("");
+            setfatherName("");
+            setmotherName("");
+            setpermanentAddress("");
+            settemporaryAddress("");
+            setcontactNumber("");
+            setemail("");
+            setmarksObtained("");
+            settuMarks("");
+            setsc("");
+            setTuroll("");
+          } catch (error) {
+            console.log(error.message);
+            setLoading(false);
+          }
         }
       }
     } else {
@@ -115,51 +119,55 @@ const Form = ({ value }) => {
       ) {
         toast.error("Fields Are Empty");
       } else {
-        setLoading(true);
-        try {
+        if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
+          toast.error("Email must be a valid Email");
+        } else {
           setLoading(true);
-          const { data } = await axios.post(
-            "http://128.199.18.46:4003/api/v1/form",
-            {
-              firstName,
-              middleName,
-              lastname,
-              faculty,
-              dateOfBirth,
-              fatherName,
-              motherName,
-              nationality,
-              permanentAddress,
-              temporaryAddress,
-              contactNumber,
-              email,
-              marksObtained,
-              sc,
-              value,
-            }
-          );
-          console.log(data);
-          toast.success(
-            "Congratulation Your Admission Request Is Recieved By Admin And Will Be Reviewed Soon"
-          );
-          setLoading(false);
-          setFirstName("");
-          setmiddleName("");
-          setlastname("");
-          setdateOfBirth("");
-          setfatherName("");
-          setmotherName("");
-          setpermanentAddress("");
-          settemporaryAddress("");
-          setcontactNumber("");
-          setemail("");
-          setmarksObtained("");
-          settuMarks("");
-          setsc("");
-          setTuroll("");
-        } catch (error) {
-          console.log(error.message);
-          setLoading(false);
+          try {
+            setLoading(true);
+            const { data } = await axios.post(
+              "http://128.199.18.46:4003/api/v1/form",
+              {
+                firstName,
+                middleName,
+                lastname,
+                faculty,
+                dateOfBirth,
+                fatherName,
+                motherName,
+                nationality,
+                permanentAddress,
+                temporaryAddress,
+                contactNumber,
+                email,
+                marksObtained,
+                sc,
+                value,
+              }
+            );
+            console.log(data);
+            toast.success(
+              "Congratulation Your Admission Request Is Recieved By Admin And Will Be Reviewed Soon"
+            );
+            setLoading(false);
+            setFirstName("");
+            setmiddleName("");
+            setlastname("");
+            setdateOfBirth("");
+            setfatherName("");
+            setmotherName("");
+            setpermanentAddress("");
+            settemporaryAddress("");
+            setcontactNumber("");
+            setemail("");
+            setmarksObtained("");
+            settuMarks("");
+            setsc("");
+            setTuroll("");
+          } catch (error) {
+            console.log(error.message);
+            setLoading(false);
+          }
         }
       }
     }
@@ -584,7 +592,7 @@ const Form = ({ value }) => {
                             <input
                               id="email"
                               name="email"
-                              type="text"
+                              type="email"
                               autocomplete="email"
                               required=""
                               placeholder="Enter your Email"
@@ -623,10 +631,10 @@ const Form = ({ value }) => {
                           </label>
                           <div className="mt-1">
                             <input
-                              id="email"
-                              name="email"
-                              type="text"
-                              autocomplete="email"
+                              id="number"
+                              name="number"
+                              type="number"
+                              autocomplete="number"
                               required=""
                               placeholder="Enter contact number"
                               className="
@@ -693,10 +701,10 @@ const Form = ({ value }) => {
                           </label>
                           <div className="mt-1">
                             <input
-                              id="email"
-                              name="email"
+                              id="sname"
+                              name="sname"
                               type="text"
-                              autocomplete="email"
+                              autocomplete="sname"
                               required=""
                               placeholder="Enter school/college name"
                               className="
@@ -736,10 +744,10 @@ const Form = ({ value }) => {
 
                           <div className="mt-1">
                             <input
-                              id="email"
-                              name="email"
+                              id="marks"
+                              name="marks"
                               type="text"
-                              autocomplete="email"
+                              autocomplete="marks"
                               required=""
                               placeholder="Enter marks pbtained"
                               className="
