@@ -18,7 +18,15 @@ const About = () => {
           marginBottom: "-5px",
         }}
       >
-        <span style={{ color: "#2C398D" }}>Click here,</span>
+        <span style={{ color: "#2C398D" }}>
+          <a
+            href="https://drive.google.com/file/d/1ndx3UzfERPV6gq9ssUWtIs9mAQipjVzH/view?usp=drivesdk"
+            target={"_blank"}
+          >
+            Click here
+          </a>
+          ,
+        </span>
         <b> to View our Brochures</b>
       </h1>
       <div className="container about__main__col mt-4">
