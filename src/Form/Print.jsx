@@ -1,9 +1,8 @@
 import { Skeleton } from "@mui/material";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import "./Form.css";
-import { toast } from "react-toastify";
 
 const Print = () => {
   const { id } = useParams();
@@ -11,6 +10,7 @@ const Print = () => {
 
   const [info, setInfo] = useState({});
   const [loading, setLoading] = useState(false);
+  const [show, setShow] = useState(true);
   useEffect(() => {
     const fetchData = async () => {
       setLoading(true);
@@ -31,6 +31,13 @@ const Print = () => {
     };
     fetchData();
   }, [render]);
+
+  const handlePrint = () => {
+    setShow(false);
+    setTimeout(() => {
+      window.print();
+    }, 1500);
+  };
 
   return (
     <>
@@ -183,12 +190,13 @@ const Print = () => {
               </tbody>
             </table>
           )}
-
-          <div style={{ padding: "10px" }}>
-            <button class="btn btn-secondary" onClick={() => window.print()}>
-              Print
-            </button>
-          </div>
+          {show && (
+            <div style={{ padding: "10px" }}>
+              <button class="btn btn-secondary" onClick={handlePrint}>
+                Print
+              </button>
+            </div>
+          )}
         </div>
         <div className="col-md-2"></div>
       </div>

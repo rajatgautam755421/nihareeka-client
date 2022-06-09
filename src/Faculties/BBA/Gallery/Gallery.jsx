@@ -1,9 +1,11 @@
 import React from "react";
+import Loader from "../../../Loader";
 import "./Gallery.css";
 
-const Gallery = ({ courseName, images }) => {
+const Gallery = ({ courseName, images, loading }) => {
   return (
     <>
+      {loading && <Loader />}
       <h1 style={{ marginTop: "50px", textAlign: "center", color: "#ec008d" }}>
         {courseName ? courseName : null} Gallery
       </h1>

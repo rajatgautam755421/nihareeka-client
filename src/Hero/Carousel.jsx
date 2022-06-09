@@ -11,7 +11,7 @@ const Carousel = () => {
         id="carouselExampleControls"
         className="carousel slide"
         data-bs-ride="carousel"
-        data-interval="1000"
+        data-interval="1"
       >
         <div className="carousel-inner">
           <div className="carousel-item active">

@@ -3,7 +3,7 @@ import "./Bba.css";
 import AccountBalanceIcon from "@mui/icons-material/AccountBalance";
 import Tabs from "./Tabs/Tabs";
 
-const Bba = ({ courseName, images }) => {
+const Bba = ({ courseName, images, loading }) => {
   return (
     <>
       <div className="container-fluid faculty__main__image">
@@ -14,7 +14,7 @@ const Bba = ({ courseName, images }) => {
           {courseName ? courseName : null}
         </h1>
       </div>
-      <Tabs courseName={courseName} images={images} />
+      <Tabs courseName={courseName} images={images} loading={loading} />
     </>
   );
 };

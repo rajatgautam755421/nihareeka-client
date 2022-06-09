@@ -9,7 +9,7 @@ import Requirement from "../Requirement/Requirement";
 import Details from "../Details/Details";
 import Gallery from "../Gallery/Gallery";
 
-const Tabs = ({ courseName, images }) => {
+const Tabs = ({ courseName, images, loading }) => {
   const [general, setGeneral] = useState(true);
   const [requirement, setRequirement] = useState(false);
   const [details, setDetails] = useState(false);
@@ -134,7 +134,9 @@ const Tabs = ({ courseName, images }) => {
       {general && <General courseName={courseName} />}
       {requirement && <Requirement courseName={courseName} />}
       {details && <Details courseName={courseName} />}
-      {gallery && <Gallery courseName={courseName} images={images} />}
+      {gallery && (
+        <Gallery courseName={courseName} images={images} loading={loading} />
+      )}
     </>
   );
 };
