@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useState } from "react";
+import { TailSpin } from "react-loader-spinner";
 import { toast } from "react-toastify";
 import Loader from "../Loader";
 import "./Dashboard.css";
@@ -10,12 +11,14 @@ const UpdateGallery = ({ setFetch, fetch1 }) => {
   const [faculty, setFaculty] = useState("csit");
   const [loading, setLoading] = useState(false);
   const [pic, setPic] = useState("");
+  const [picLoader, setPicLoader] = useState(false);
 
   const postDetails = (pics) => {
     if (pics === undefined) {
       toast.error("Invalid Image");
       return;
     }
+    setPicLoader(true);
     const data = new FormData();
     data.append("file", pics);
 
@@ -31,9 +34,11 @@ const UpdateGallery = ({ setFetch, fetch1 }) => {
       .then((data) => {
         setPic(data.url.toString());
         console.log(pic);
+        setPicLoader(false);
       })
       .catch((err) => {
         console.log(err);
+        setPicLoader(false);
       });
   };
 
@@ -72,6 +77,19 @@ const UpdateGallery = ({ setFetch, fetch1 }) => {
   return (
     <>
       {loading && <Loader />}
+      {picLoader && (
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "space-around",
+            width: "100%",
+          }}
+        >
+          <h1 className="text-xl flex justify-center">Pic Is Loading...</h1>
+
+          <TailSpin color="#000" height={30} width={30} timeout={2500} />
+        </div>
+      )}
       <section className=" main__secction1">
         <div className="w-1/1 flex  overflow-hidden ">
           <div
@@ -222,7 +240,16 @@ const UpdateGallery = ({ setFetch, fetch1 }) => {
                         className=" bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg contact__us__main__button mt-4"
                         onClick={handleClick}
                       >
-                        Upload
+                        {picLoader ? (
+                          <TailSpin
+                            color="#000"
+                            height={20}
+                            width={20}
+                            timeout={2500}
+                          />
+                        ) : (
+                          "Upload"
+                        )}
                       </button>
                     </div>
                   </form>

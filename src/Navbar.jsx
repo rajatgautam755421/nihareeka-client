@@ -235,7 +235,7 @@ const Navbar = ({ clicked, setClicked }) => {
                   }
                   to="news-event"
                 >
-                  News And Events
+                  News And Results
                 </NavLink>
               </li>
 

@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { useState } from "react";
 import { toast } from "react-toastify";
 import Loader from "../Loader";
+import { TailSpin } from "react-loader-spinner";
 import "./Dashboard.css";
 const UpdateEvent = ({ fetch4, setFetch4 }) => {
   const [title, setTitle] = useState("");
@@ -9,12 +10,14 @@ const UpdateEvent = ({ fetch4, setFetch4 }) => {
   const [pic, setPic] = useState("");
   const [category, setCategory] = useState("");
   const [loading, setLoading] = useState(false);
+  const [picLoader, setPicLoader] = useState(false);
 
   const postDetails = (pics) => {
     if (pics === undefined) {
       toast.error("Invalid Image");
       return;
     }
+    setPicLoader(true);
     const data = new FormData();
     data.append("file", pics);
 
@@ -29,10 +32,13 @@ const UpdateEvent = ({ fetch4, setFetch4 }) => {
       .then((res) => res.json())
       .then((data) => {
         setPic(data.url.toString());
+
         console.log(pic);
+        setPicLoader(false);
       })
       .catch((err) => {
         console.log(err);
+        setPicLoader(false);
       });
   };
 
@@ -71,6 +77,19 @@ const UpdateEvent = ({ fetch4, setFetch4 }) => {
   return (
     <>
       {loading && <Loader />}
+      {picLoader && (
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "space-around",
+            width: "100%",
+          }}
+        >
+          <h1 className="text-xl flex justify-center">Pic Is Loading...</h1>
+
+          <TailSpin color="#000" height={30} width={30} timeout={2500} />
+        </div>
+      )}
       <section className="main__secction1">
         <div className="w-1/1 flex  overflow-hidden ">
           <div
@@ -248,7 +267,16 @@ const UpdateEvent = ({ fetch4, setFetch4 }) => {
                         className=" bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg contact__us__main__button mt-4"
                         onClick={handleClick}
                       >
-                        Upload
+                        {picLoader ? (
+                          <TailSpin
+                            color="#000"
+                            height={20}
+                            width={20}
+                            timeout={2500}
+                          />
+                        ) : (
+                          "Upload"
+                        )}
                       </button>
                     </div>
                   </form>

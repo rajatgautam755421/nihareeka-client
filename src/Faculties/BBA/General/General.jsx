@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./General.css";
 import BookOutlinedIcon from "@mui/icons-material/BookOutlined";
 import CalendarMonthOutlinedIcon from "@mui/icons-material/CalendarMonthOutlined";
@@ -7,7 +7,20 @@ import SchoolOutlinedIcon from "@mui/icons-material/SchoolOutlined";
 import CareerDetails from "../Details/CareerDetails";
 
 const Info = ({ courseName }) => {
+  const [course, setCousre] = useState("");
+  const [credit, setCredit] = useState("");
   console.log(courseName);
+
+  useEffect(() => {
+    if (courseName === "MBS") {
+      setCousre("2 Years");
+      setCredit("60");
+    } else {
+      setCousre("4 Years");
+      setCredit("122");
+    }
+  }, []);
+  console.log(course);
   return (
     <>
       <div className="container" style={{ marginTop: "50px" }}>
@@ -23,14 +36,14 @@ const Info = ({ courseName }) => {
             <CalendarMonthOutlinedIcon className="general__icon__main" />
             <div className="container">
               <h5>Course Duration</h5>
-              <h4>4 Years</h4>
+              <h4>{course}</h4>
             </div>
           </div>
           <div className="col-md-3 col-sm-6 general__col__main mt-4">
             <AccessTimeOutlinedIcon className="general__icon__main" />
             <div className="container">
               <h5>Credit Hour</h5>
-              <h4>122</h4>
+              <h4>{credit}</h4>
             </div>
           </div>
           <div className="col-md-3 col-sm-6 general__col__main mt-4">

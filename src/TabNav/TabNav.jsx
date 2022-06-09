@@ -5,7 +5,6 @@ import CallOutlinedIcon from "@mui/icons-material/CallOutlined";
 import AdminPanelSettingsOutlinedIcon from "@mui/icons-material/AdminPanelSettingsOutlined";
 import { NavLink, useLocation } from "react-router-dom";
 import LogoutIcon from "@mui/icons-material/Logout";
-import CircleNotificationsOutlinedIcon from "@mui/icons-material/CircleNotificationsOutlined";
 
 import MobileNotification from "../Notification/MobileNotification";
 import axios from "axios";
@@ -96,19 +95,6 @@ const TabNav = ({ clicked, setClicked }) => {
               className="tab__nav__icon"
             />
           </NavLink>
-        )}
-
-        {user && (
-          <CircleNotificationsOutlinedIcon
-            style={{
-              color: "white",
-              width: "30px",
-              height: "30px",
-              cursor: "pointer",
-            }}
-            className="tab__nav__icon"
-            onClick={() => setShow(!show)}
-          />
         )}
 
         {user ? (

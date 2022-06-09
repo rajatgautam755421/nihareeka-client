@@ -54,7 +54,6 @@ const Contact = ({ badge, setBadge }) => {
       }
     }
   };
-  console.log(email, name, message);
   return (
     <>
       {loading && <Loader />}
