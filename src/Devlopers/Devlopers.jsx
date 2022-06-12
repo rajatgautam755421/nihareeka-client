@@ -154,7 +154,7 @@ const Devlopers = () => {
                 <img
                   alt="team"
                   className="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center sm:mb-0 mb-4 faculty__members__image__main"
-                  src="https://res.cloudinary.com/mechi-pharma123/image/upload/v1654339116/Faculty%20Members/amanraj_bjdae3.jpg"
+                  src="https://res.cloudinary.com/mechi-pharma123/image/upload/v1655030167/Faculty%20Members/aman_sffjvr.jpg"
                 />
                 <div className="flex-grow sm:pl-8">
                   <h3 className="text-gray-900 mb-3">Aman Rajbanshi</h3>

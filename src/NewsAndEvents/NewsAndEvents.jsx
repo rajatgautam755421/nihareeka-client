@@ -34,7 +34,7 @@ const NewsAndEvents = () => {
   const handleDecr = () => {
     if (notices) {
       if (i === 0) {
-        setI(0);
+        setI(notices.length - 1);
       } else {
         setI(i - 1);
       }
@@ -71,7 +71,13 @@ const NewsAndEvents = () => {
         >
           <ArrowBackIosNewIcon
             onClick={handleDecr}
-            style={{ cursor: "pointer" }}
+            style={{
+              cursor: "pointer",
+              position: "absolute",
+              left: "0vw",
+              width: "40px",
+              height: "40px",
+            }}
           />
           <div style={{ overflowX: "auto" }}>
             <img
@@ -79,16 +85,15 @@ const NewsAndEvents = () => {
               alt=""
               srcset=""
               style={{
-                width: "70%",
-                height: "70%",
-                objectFit: "contain",
                 margin: "0px auto",
+                height: "80vh",
+                width: "8pvw",
               }}
             />{" "}
           </div>
           <ArrowForwardIosIcon
             onClick={handleIncr}
-            style={{ cursor: "pointer" }}
+            className="arrow__forward__icon"
           />
           <Tooltip title="close">
             <CloseIcon
@@ -99,24 +104,34 @@ const NewsAndEvents = () => {
                 height: "35px",
                 cursor: "pointer",
               }}
-              onClick={() => setShow(false)}
+              onClick={() => {
+                setShow(false);
+                setI(0);
+              }}
             />
           </Tooltip>
         </Backdrop>
       )}
-      <div
-        className="container"
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          cursor: "pointer",
-          alignItems: "center",
-          marginTop: "30px",
-        }}
-      >
-        <h6 onClick={() => setShow(true)}>Gallery View</h6>
-        <CollectionsIcon />
-      </div>
+      <Tooltip title="Gallery View">
+        <div
+          className="container"
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            cursor: "pointer",
+            alignItems: "center",
+            marginTop: "30px",
+          }}
+          onClick={() => setShow(true)}
+        >
+          <h6
+            style={{ marginRight: "10px", fontSize: "20px", marginTop: "5px" }}
+          >
+            Gallery View Of Events
+          </h6>
+          <CollectionsIcon />
+        </div>
+      </Tooltip>
       {notices
         ? notices.length === 0 && (
             <h6 style={{ marginTop: "10px", textAlign: "center" }}>

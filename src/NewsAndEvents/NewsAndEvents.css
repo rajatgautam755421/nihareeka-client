@@ -57,3 +57,11 @@
   transform: scale(1.08);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12), 0 4px 8px rgba(0, 0, 0, 0.06);
 }
+
+.arrow__forward__icon {
+  position: absolute !important;
+  cursor: pointer !important;
+  right: 0;
+  width: 40px !important;
+  height: 40px !important;
+}

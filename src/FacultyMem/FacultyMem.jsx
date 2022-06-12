@@ -121,7 +121,12 @@ const FacultyMem = () => {
                 "https://res.cloudinary.com/mechi-pharma123/image/upload/v1654321172/Faculty%20Members/sandip_idkeib.jpg"
               }
             />
-            <FacultyData name={"Sanu Koirala"} image={""} />
+            <FacultyData
+              name={"Sanu Koirala"}
+              image={
+                "https://res.cloudinary.com/mechi-pharma123/image/upload/v1655030240/Faculty%20Members/sanu_kgdw8x.jpg"
+              }
+            />
             <FacultyData
               name={"Alina Lamichhane"}
               image={
