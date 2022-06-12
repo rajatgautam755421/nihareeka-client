@@ -35,18 +35,8 @@ function Management() {
               wh="https://www.whatsapp.com/"
             />
             <ManagamentInfo
-              name={"Gyanandra Karki"}
-              post={"Dean"}
-              image={
-                "https://res.cloudinary.com/mechi-pharma123/image/upload/v1654265274/Staff/gyanu_qgq4pl.jpg"
-              }
-              fa="https://www.facebook.com/gyanendra.karki.54"
-              tw="https://twitter.com/"
-              wh="https://www.whatsapp.com/"
-            />
-            <ManagamentInfo
               name={"Dipesh Bastola"}
-              post={"Board of Directors"}
+              post={"Vice Chairman"}
               image={
                 "https://res.cloudinary.com/mechi-pharma123/image/upload/v1654265338/Staff/sipesh_dkoyo6.jpg"
               }
@@ -55,8 +45,18 @@ function Management() {
               wh="https://www.whatsapp.com/"
             />
             <ManagamentInfo
+              name={"Gyanandra Karki"}
+              post={"Director"}
+              image={
+                "https://res.cloudinary.com/mechi-pharma123/image/upload/v1654265274/Staff/gyanu_qgq4pl.jpg"
+              }
+              fa="https://www.facebook.com/gyanendra.karki.54"
+              tw="https://twitter.com/"
+              wh="https://www.whatsapp.com/"
+            />
+            <ManagamentInfo
               name={"Mahesh Niraula"}
-              post={"Board of Directors"}
+              post={"Director"}
               image={
                 "https://res.cloudinary.com/mechi-pharma123/image/upload/v1654265305/Staff/mahesh_lbhb0k.jpg"
               }
@@ -66,7 +66,7 @@ function Management() {
             />
             <ManagamentInfo
               name={"Tulsi Khatiwada"}
-              post={"Board of Directors"}
+              post={"Director"}
               image={
                 "https://res.cloudinary.com/mechi-pharma123/image/upload/v1654265391/Staff/tulsi_midw3j.jpg"
               }

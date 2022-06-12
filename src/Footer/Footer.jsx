@@ -1,9 +1,7 @@
 import React, { useState } from "react";
 import "./Footer.css";
 import FacebookIcon from "@mui/icons-material/Facebook";
-import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import YouTubeIcon from "@mui/icons-material/YouTube";
 import SubFooter from "./SubFooter";
 import axios from "axios";
 import { toast } from "react-toastify";
@@ -59,16 +57,18 @@ const Footer = () => {
             <div className="col-md-2 col-6" style={{ marginTop: "30px" }}>
               <SubFooter
                 heading="Faculties"
-                link1="Bsc.CSIT"
+                link1="BSc.CSIT"
                 linkto1="/faculty/csit"
+                link4="BIM"
+                linkto4="faculty/bim"
                 link2=" BCA"
                 linkto2="faculty/bca"
                 link3="BHM"
                 linkto3="faculty/bhm"
-                link4="BIT"
-                linkto4="faculty/bit"
                 link5="BBS"
                 linkto5="faculty/bbs"
+                link6="MBS"
+                linkto6="faculty/mbs"
               />{" "}
             </div>
 

@@ -11,6 +11,7 @@ import CloseIcon from "@mui/icons-material/Close";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import CollectionsIcon from "@mui/icons-material/Collections";
+
 const NewsAndEvents = () => {
   const [notices, setNotices] = useState([]);
   const [show, setShow] = useState(false);

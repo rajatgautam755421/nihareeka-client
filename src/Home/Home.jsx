@@ -17,6 +17,8 @@ import CSIT from "../assets/CSIT/CSIT.JPG";
 import BCA from "../assets/BCA/BCA.JPG";
 import Testimonials from "../Testimonials/Testimonials";
 import Modal from "../Modal/Modal";
+import WelcomeMessage1 from "./WelcomeMessage1";
+import WelcomeMessage2 from "./WelcomeMessage2";
 
 const Home = (props) => {
   const [showModal, setShowModal] = useState(false);
@@ -48,12 +50,21 @@ const Home = (props) => {
         <Hero />
 
         <div className="row">
-          <div className="col-md-3 col-12"></div>
-          <div className="col-md-6 col-12">
-            {" "}
+          <h1
+            style={{ textAlign: "center", color: "#D90081", marginTop: "25px" }}
+          >
+            <b>Welcome Message</b>
+          </h1>
+          <div className="col-md-4 col-12">
             <WelcomeMessage />
           </div>
-          <div className="col-md-3 col-12 "></div>
+          <div className="col-md-4 col-12">
+            {" "}
+            <WelcomeMessage1 />
+          </div>
+          <div className="col-md-4 col-12 ">
+            <WelcomeMessage2 />
+          </div>
         </div>
 
         <News />
@@ -86,7 +97,7 @@ const Home = (props) => {
             <div className="beauty">
               {" "}
               <Course
-                course={"Bsc.CSIT"}
+                course={"BSc.CSIT"}
                 desc="Bachelor of Science in Computer Science and Information technology (B.Sc.CSIT) provides knowledge about principles of Computer Science and Information technology."
                 time="4 years|8 semesters"
                 image={CSIT}

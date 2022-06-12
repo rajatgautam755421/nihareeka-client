@@ -1,6 +1,6 @@
 import React from "react";
 import "./Home.css";
-const WelcomeMessage = () => {
+const WelcomeMessage1 = () => {
   return (
     <>
       <div className="container-fluid">
@@ -17,14 +17,14 @@ const WelcomeMessage = () => {
                 />
                 <div className="w-24 -mt-22 overflow-hidden border border-2 border-white rounded-full mx-auto bg-white">
                   <img
-                    src="https://res.cloudinary.com/mechi-pharma123/image/upload/v1654265140/Staff/amit_xlgfq2.jpg"
+                    src="https://res.cloudinary.com/mechi-pharma123/image/upload/v1654265184/Staff/rupesh_jyrq2a.jpg"
                     alt=""
                   />
                 </div>
                 <div className="p-6">
-                  <h4 className="text-2xl font-semibold ">Amit Dhakal</h4>
+                  <h4 className="text-2xl font-semibold ">Rupesh Khatiwada</h4>
                   <h5 className="text-sm  mb-4 welcome__principal">
-                    The Campus Chief
+                    The Chairman
                   </h5>
 
                   <hr />
@@ -44,20 +44,20 @@ const WelcomeMessage = () => {
                         d="M464 256h-80v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8c-88.4 0-160 71.6-160 160v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48zm-288 0H96v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8C71.6 32 0 103.6 0 192v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48z"
                       />
                     </svg>
-                    It's my pleasure to let you know about Nihareeka College, a
-                    college of management and information technology. To achieve
-                    its goal of high quality education, the college focuses much
-                    on management and information technology in its academic
-                    voyage along with experimental and experiential learning.
-                    Our resource persons are highly qualified and dedicated and
-                    are willing to go an extra mile in developing and enhancing
-                    student's capabilities of achieving their goals. Apart from
-                    academic activities and on-campus programmes, Nihareeka
-                    College is also associated with software companies, system
-                    administration, network management and off campus
-                    programmes. Finally, I recommend all interested and
-                    deserving students to join BBS or B.Sc. CSIT programmes run
-                    by Nihareeka College; affiliated to Tribhuvan University.{" "}
+                    A quality education is essential for students to secure a
+                    good future for themselves, it can not only enhance the
+                    lives of the students, but also contribute to the overall
+                    development of our country.Nihareeka College is committed to
+                    deliver quality education, outstanding research and
+                    international engagement in the globalized environment which
+                    makes it an institute that is energetic and vibrant.We do
+                    not force the education on our students as we encourage them
+                    to know their ambitions and to be more career-prospective
+                    which enlightenments their inside to serve the nation whole
+                    heartedly with the latest technology and new ideas.
+                    <br />
+                    On behalf of Nihareeka, I welcome you to Nihareeka and make
+                    sure that we give our best to make your dreams come true.
                   </p>
                 </div>
               </div>
@@ -69,4 +69,4 @@ const WelcomeMessage = () => {
   );
 };
 
-export default WelcomeMessage;
+export default WelcomeMessage1;

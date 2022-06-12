@@ -47,7 +47,7 @@ const About = () => {
                 Nihareeka College of Management and IT
               </span>
               &nbsp; located at Bargachhi, Biratnagar is top college of Province
-              1. The college has been running Bsc.CSIT,BHM, BBS and MBS (with
+              1. The college has been running Bsc.CSIT, BHM, BBS and MBS (with
               100 % success results) and is also running BCA and BIM along with
               the core values of professional courses, mandatory internship in
               the IT industry and Job Placement.

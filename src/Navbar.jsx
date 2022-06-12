@@ -120,7 +120,7 @@ const Navbar = ({ clicked, setClicked }) => {
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
-                  Faculties
+                  Programs
                 </a>
                 <ul
                   className="dropdown-menu secondary__drop"
@@ -129,7 +129,12 @@ const Navbar = ({ clicked, setClicked }) => {
                 >
                   <li>
                     <NavLink className="dropdown-item" to="/faculty/csit">
-                      Bsc.CSIT
+                      BSc.CSIT
+                    </NavLink>
+                  </li>
+                  <li>
+                    <NavLink className="dropdown-item" to="/faculty/bim">
+                      BIM
                     </NavLink>
                   </li>
                   <li>
@@ -139,18 +144,13 @@ const Navbar = ({ clicked, setClicked }) => {
                   </li>
 
                   <li>
-                    <NavLink className="dropdown-item" to="/faculty/bbs">
-                      BBS
-                    </NavLink>
-                  </li>
-                  <li>
                     <NavLink className="dropdown-item" to="/faculty/bhm">
                       BHM
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink className="dropdown-item" to="/faculty/bim">
-                      BIM
+                    <NavLink className="dropdown-item" to="/faculty/bbs">
+                      BBS
                     </NavLink>
                   </li>
                   <li>

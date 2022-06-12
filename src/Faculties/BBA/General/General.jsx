@@ -109,6 +109,20 @@ const Info = ({ courseName }) => {
               )
             : null}
           {courseName
+            ? courseName === "BIM" && (
+                <>
+                  {" "}
+                  &nbsp; The Bachelor of Information Management (BIM) program is
+                  a four-year (eight-semester) program of Tribhuvan University
+                  offering integrated IT and Management Courses. This course is
+                  envisaged to enable students to develop skills in information
+                  technology, and at the same time make them able to understand
+                  the professional expertise while they occupy decision-making
+                  positions.
+                </>
+              )
+            : null}
+          {courseName
             ? courseName === "BBS" && (
                 <>
                   {" "}
@@ -130,10 +144,22 @@ const Info = ({ courseName }) => {
                   &nbsp;is to produce high quality computer application users
                   and developers. The program of study for Bachelor of Arts in
                   Computer Application (BCA) is over a period of eight semesters
-                  (four academic years). The academic year begins in the
-                  September and February of each year. The medium of instruction
-                  and examination in the Bachelor of Arts in Computer
-                  Application (BCA) program is English..
+                  (four academic years). The medium of instruction and
+                  examination in the Bachelor of Arts in Computer Application
+                  (BCA) program is English.
+                </>
+              )
+            : null}
+          {courseName
+            ? courseName === "MBS" && (
+                <>
+                  {" "}
+                  &nbsp;MASTER of Business Studies is a two-year (4 semester)
+                  master’s degree program affiliated to Tribhuvan University
+                  that requires students to study for a total of 60 credit
+                  hours. The course aims at providing students with knowledge of
+                  business studies and management in both practicable and
+                  theoretical ways and developing their research potency.
                 </>
               )
             : null}
