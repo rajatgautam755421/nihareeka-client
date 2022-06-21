@@ -37,7 +37,7 @@ function App() {
     <div className="App">
       <ScrollRes />
       <ToastContainer></ToastContainer>
-      <MessengerCustomerChat pageId="111241211239691" appId="829054781081682" />
+      <MessengerCustomerChat pageId="579816802074328" appId="829054781081682" />
       <Navbar clicked={clicked} setClicked={setClicked} />
       <Routes>
         <Route path="/" element={<Home />} />
