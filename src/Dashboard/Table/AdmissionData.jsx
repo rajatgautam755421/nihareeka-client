@@ -10,7 +10,7 @@ const AdmissionData = ({ value, render, setRender }) => {
 
   const handleClick = async () => {
     const { data } = await axios.delete(
-      `http://128.199.18.46:4003/api/v1/form/delete/${value ? value._id : null}`
+      `http://68.183.17.93:4003/api/v1/form/delete/${value ? value._id : null}`
     );
     try {
       console.log(data);

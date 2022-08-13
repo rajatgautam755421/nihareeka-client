@@ -13,7 +13,7 @@ const MobileNotification = ({ clicked, setClicked, badge }) => {
     try {
       setLoading(true);
       const { data } = await axios.get(
-        "http://128.199.18.46:4003/api/v1/contact"
+        "http://68.183.17.93:4003/api/v1/contact"
       );
       console.log(data);
       setContacts(data.getContact);
@@ -29,7 +29,7 @@ const MobileNotification = ({ clicked, setClicked, badge }) => {
 
   const handleClick = async () => {
     const { data } = await axios.put(
-      `http://128.199.18.46:4003/api/v1/notification/false`
+      `http://68.183.17.93:4003/api/v1/notification/false`
     );
     try {
       setClicked(!clicked);

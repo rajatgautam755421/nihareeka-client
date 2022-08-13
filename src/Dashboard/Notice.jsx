@@ -13,7 +13,7 @@ const Notice = ({ setRender, render }) => {
       toast.error("Fields Are Empty");
     } else {
       const { data } = await axios.post(
-        "http://128.199.18.46:4003/api/v1/notice",
+        "http://68.183.17.93:4003/api/v1/notice",
         {
           title,
           startDate,

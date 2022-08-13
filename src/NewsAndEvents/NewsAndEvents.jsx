@@ -19,7 +19,7 @@ const NewsAndEvents = () => {
   useEffect(() => {
     const fetchData = async () => {
       const { data } = await axios.get(
-        "http://128.199.18.46:4003/api/v1/events"
+        "http://68.183.17.93:4003/api/v1/events"
       );
       try {
         console.log(data);

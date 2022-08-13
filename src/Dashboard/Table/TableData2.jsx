@@ -7,7 +7,7 @@ import { Tooltip } from "@mui/material";
 const TableData2 = ({ value, setClicked }) => {
   const handleClick = async () => {
     const { data } = await axios.delete(
-      `http://128.199.18.46:4003/api/v1/newsletter/${value ? value._id : null}`
+      `http://68.183.17.93:4003/api/v1/newsletter/${value ? value._id : null}`
     );
     try {
       setClicked(true);

@@ -15,7 +15,7 @@ const Details = () => {
     const fetchData = async () => {
       setLoading(true);
       const { data } = await axios.get(
-        `http://128.199.18.46:4003/api/v1/form/${id}`
+        `http://68.183.17.93:4003/api/v1/form/${id}`
       );
 
       try {
@@ -34,12 +34,12 @@ const Details = () => {
 
   const handleAccept = async () => {
     const { data } = await axios.put(
-      `http://128.199.18.46:4003/api/v1/form/update/${id}/accepted`
+      `http://68.183.17.93:4003/api/v1/form/update/${id}/accepted`
     );
     setRender(!render);
     if (data) {
       const response = await axios.get(
-        `http://128.199.18.46:4003/api/v1/mail/accept/${
+        `http://68.183.17.93:4003/api/v1/mail/accept/${
           info ? info.email : null
         }/Your Admission Request Has Been Accepted.Please Contact Nihareeka College For More Information.`
       );
@@ -57,12 +57,12 @@ const Details = () => {
 
   const handleReject = async () => {
     const { data } = await axios.put(
-      `http://128.199.18.46:4003/api/v1/form/update/${id}/rejected`
+      `http://68.183.17.93:4003/api/v1/form/update/${id}/rejected`
     );
     setRender(!render);
     if (data) {
       const response = await axios.get(
-        `http://128.199.18.46:4003/api/v1/mail/reject/${
+        `http://68.183.17.93:4003/api/v1/mail/reject/${
           info ? info.email : null
         }/Your Admission Request Has Been Rejected.Please Contact Nihareeka College For More Information.`
       );

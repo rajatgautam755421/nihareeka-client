@@ -9,7 +9,7 @@ const NoticeData = ({ value, setRefresh, refresh }) => {
   const handleDelete = async () => {
     setLoading(true);
     const { data } = await axios.delete(
-      `http://128.199.18.46:4003/api/v1/notice/${value ? value._id : null}`
+      `http://68.183.17.93:4003/api/v1/notice/${value ? value._id : null}`
     );
     try {
       console.log(data);

@@ -56,7 +56,7 @@ const Form = ({ value }) => {
             setLoading(true);
 
             const { data } = await axios.post(
-              "http://128.199.18.46:4003/api/v1/form",
+              "http://68.183.17.93:4003/api/v1/form",
               {
                 firstName,
                 middleName,
@@ -127,7 +127,7 @@ const Form = ({ value }) => {
             setLoading(true);
 
             const { data } = await axios.post(
-              "http://128.199.18.46:4003/api/v1/form",
+              "http://68.183.17.93:4003/api/v1/form",
               {
                 firstName,
                 middleName,

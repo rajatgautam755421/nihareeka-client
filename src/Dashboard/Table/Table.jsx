@@ -12,7 +12,7 @@ const Table = () => {
     try {
       setLoading(true);
       const { data } = await axios.get(
-        "http://128.199.18.46:4003/api/v1/contact"
+        "http://68.183.17.93:4003/api/v1/contact"
       );
       setContacts(data.getContact);
       console.log(contacts);
