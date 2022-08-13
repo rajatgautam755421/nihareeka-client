@@ -7,6 +7,7 @@ import { ThreeDots } from "react-loader-spinner";
 import { toast } from "react-toastify";
 import axios from "axios";
 import Loader from "../Loader";
+import { ENDPOINT } from "../GlobalVariables";
 
 const Contact = ({ badge, setBadge }) => {
   const [show, setShow] = useState(false);
@@ -30,10 +31,11 @@ const Contact = ({ badge, setBadge }) => {
       if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
         setLoading(true);
         try {
-          const { data } = await axios.post(
-            "http://68.183.17.93:4003/api/v1/contact",
-            { name, email, message }
-          );
+          const { data } = await axios.post(`${ENDPOINT}/api/v1/contact`, {
+            name,
+            email,
+            message,
+          });
           setLoading(true);
 
           console.log(data);
@@ -43,7 +45,7 @@ const Contact = ({ badge, setBadge }) => {
           setMessage("");
           setLoading(false);
           const response = await axios.put(
-            `http://68.183.17.93:4003/api/v1/notification/${request}`
+            `${ENDPOINT}/api/v1/notification/${request}`
           );
         } catch (error) {
           toast.error("Network Error");

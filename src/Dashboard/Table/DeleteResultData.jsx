@@ -3,6 +3,7 @@ import DeleteIcon from "@mui/icons-material/Delete";
 import axios from "axios";
 import { toast } from "react-toastify";
 import { Tooltip } from "@mui/material";
+import { ENDPOINT } from "../../GlobalVariables";
 
 const DeleteResultData = ({ value, setRender, render, index }) => {
   console.log(value);
@@ -10,7 +11,7 @@ const DeleteResultData = ({ value, setRender, render, index }) => {
   const handleClick = async (e) => {
     e.preventDefault();
     const { data } = await axios.delete(
-      `http://68.183.17.93:4003/api/v1/result/${value ? value._id : null}`
+      `${ENDPOINT}/api/v1/result/${value ? value._id : null}`
     );
     try {
       console.log(data);

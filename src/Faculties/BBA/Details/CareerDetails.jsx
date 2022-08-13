@@ -1,7 +1,6 @@
 import React from "react";
 import "./CareerDetails.css";
 import CheckCircleOutlinedIcon from "@mui/icons-material/CheckCircleOutlined";
-import Image from "../../../assets/course.svg";
 
 const CareerDetails = ({ courseName }) => {
   return (
@@ -53,7 +52,11 @@ const CareerDetails = ({ courseName }) => {
                   </div>
                 </div>
                 <div className="col-md-8" style={{ marginTop: "20px" }}>
-                  <img src={Image} alt="" srcset="" />
+                  <img
+                    src="https://res.cloudinary.com/mechi-pharma123/image/upload/v1654325163/Faculty%20Members/WhatsApp_Image_2022-06-04_at_12.30.35_PM_g90xs4.jpg"
+                    alt=""
+                    srcset=""
+                  />
                 </div>
               </div>
             </div>

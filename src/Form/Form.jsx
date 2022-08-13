@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import "./Form.css";
-import Image from "../../src/assets/index.jpg";
 import axios from "axios";
 import { toast } from "react-toastify";
 import { TailSpin } from "react-loader-spinner";
+import { ENDPOINT } from "../GlobalVariables";
 const Form = ({ value }) => {
   const [firstName, setFirstName] = useState("");
   const [middleName, setmiddleName] = useState("");
@@ -55,28 +55,25 @@ const Form = ({ value }) => {
           try {
             setLoading(true);
 
-            const { data } = await axios.post(
-              "http://68.183.17.93:4003/api/v1/form",
-              {
-                firstName,
-                middleName,
-                lastname,
-                faculty,
-                dateOfBirth,
-                fatherName,
-                motherName,
-                nationality,
-                permanentAddress,
-                temporaryAddress,
-                contactNumber,
-                email,
-                marksObtained,
-                tuMarks,
-                tuRoll,
-                sc,
-                value,
-              }
-            );
+            const { data } = await axios.post(`${ENDPOINT}/api/v1/form`, {
+              firstName,
+              middleName,
+              lastname,
+              faculty,
+              dateOfBirth,
+              fatherName,
+              motherName,
+              nationality,
+              permanentAddress,
+              temporaryAddress,
+              contactNumber,
+              email,
+              marksObtained,
+              tuMarks,
+              tuRoll,
+              sc,
+              value,
+            });
             console.log(data);
             toast.success(
               "Congratulation Your Admission Request Is Recieved By Admin And Will Be Reviewed Soon"
@@ -126,26 +123,23 @@ const Form = ({ value }) => {
           try {
             setLoading(true);
 
-            const { data } = await axios.post(
-              "http://68.183.17.93:4003/api/v1/form",
-              {
-                firstName,
-                middleName,
-                lastname,
-                faculty,
-                dateOfBirth,
-                fatherName,
-                motherName,
-                nationality,
-                permanentAddress,
-                temporaryAddress,
-                contactNumber,
-                email,
-                marksObtained: marksObtained === "" ? "0" : marksObtained,
-                sc,
-                value,
-              }
-            );
+            const { data } = await axios.post(`${ENDPOINT}/api/v1/form`, {
+              firstName,
+              middleName,
+              lastname,
+              faculty,
+              dateOfBirth,
+              fatherName,
+              motherName,
+              nationality,
+              permanentAddress,
+              temporaryAddress,
+              contactNumber,
+              email,
+              marksObtained: marksObtained === "" ? "0" : marksObtained,
+              sc,
+              value,
+            });
             console.log(data);
             toast.success(
               "Congratulation Your Admission Request Is Recieved By Admin And Will Be Reviewed Soon"
@@ -188,7 +182,7 @@ const Form = ({ value }) => {
             style={{
               margin: "10px auto",
             }}
-            src={Image}
+            src="https://res.cloudinary.com/mechi-pharma123/image/upload/v1654325163/Faculty%20Members/WhatsApp_Image_2022-06-04_at_12.30.35_PM_g90xs4.jpg"
             alt=""
           />
           <h1

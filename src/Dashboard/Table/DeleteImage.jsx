@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import DeleteImageData from "./DeleteImageData";
 import Loader from "../../Loader";
+import { ENDPOINT } from "../../GlobalVariables";
 
 const GalleryImage = ({ fetch1 }) => {
   const [images, setImages] = useState([]);
@@ -10,9 +11,7 @@ const GalleryImage = ({ fetch1 }) => {
   useEffect(() => {
     const fetchItems = async () => {
       setLoading(true);
-      const { data } = await axios.get(
-        "http://68.183.17.93:4003/api/v1/gallery"
-      );
+      const { data } = await axios.get(`${ENDPOINT}/api/v1/gallery`);
       try {
         setLoading(true);
         console.log(data);

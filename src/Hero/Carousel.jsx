@@ -1,8 +1,5 @@
 import React from "react";
 import "./Hero.css";
-import photo from "../assets/CSIT/library2.JPG";
-import photo1 from "../assets/CSIT/library.JPG";
-import Carousel3 from "../assets/BBS/Carousel3.JPG";
 
 const Carousel = () => {
   return (

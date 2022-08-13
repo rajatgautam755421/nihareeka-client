@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import { ENDPOINT } from "../../GlobalVariables";
 import Loader from "../../Loader";
 import AdmissionData from "./AdmissionData";
 
@@ -10,7 +11,7 @@ const Admission = () => {
   useEffect(() => {
     const fetchData = async () => {
       setLoading(true);
-      const { data } = await axios.get("http://68.183.17.93:4003/api/v1/form");
+      const { data } = await axios.get(`${ENDPOINT}/api/v1/form`);
 
       try {
         setLoading(true);

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import NoticeData from "./NoticeData";
 import Loader from "../../Loader";
+import { ENDPOINT } from "../../GlobalVariables";
 
 const NoticeTable = ({ render }) => {
   const [notice, setNotice] = useState([]);
@@ -11,9 +12,7 @@ const NoticeTable = ({ render }) => {
     setLoading(true);
     try {
       setLoading(true);
-      const { data } = await axios.get(
-        "http://68.183.17.93:4003/api/v1/notice"
-      );
+      const { data } = await axios.get(`${ENDPOINT}/api/v1/notice`);
       console.log(data);
       setNotice(data);
       setLoading(false);

@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { useState } from "react";
 import { TailSpin } from "react-loader-spinner";
 import { toast } from "react-toastify";
+import { ENDPOINT } from "../GlobalVariables";
 import Loader from "../Loader";
 import "./Dashboard.css";
 
@@ -50,15 +51,12 @@ const UpdateGallery = ({ setFetch, fetch1 }) => {
       setLoading(false);
     } else {
       setLoading(true);
-      const { data } = await axios.post(
-        "http://68.183.17.93:4003/api/v1/gallery",
-        {
-          pic,
-          title,
-          faculty,
-          description,
-        }
-      );
+      const { data } = await axios.post(`${ENDPOINT}/api/v1/gallery`, {
+        pic,
+        title,
+        faculty,
+        description,
+      });
       try {
         setLoading(true);
         console.log(data);

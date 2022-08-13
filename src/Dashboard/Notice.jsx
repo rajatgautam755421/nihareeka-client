@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useState } from "react";
 import { toast } from "react-toastify";
+import { ENDPOINT } from "../GlobalVariables";
 import "./Dashboard.css";
 
 const Notice = ({ setRender, render }) => {
@@ -12,14 +13,11 @@ const Notice = ({ setRender, render }) => {
     if (title === "" || startDate === "" || endDate === "") {
       toast.error("Fields Are Empty");
     } else {
-      const { data } = await axios.post(
-        "http://68.183.17.93:4003/api/v1/notice",
-        {
-          title,
-          startDate,
-          endDate,
-        }
-      );
+      const { data } = await axios.post(`${ENDPOINT}/api/v1/notice`, {
+        title,
+        startDate,
+        endDate,
+      });
       try {
         console.log(data);
         setRender(!render);

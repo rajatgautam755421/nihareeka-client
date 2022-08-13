@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import { ENDPOINT } from "../../GlobalVariables";
 import Loader from "../../Loader";
 
 import EventsTableData from "./EventsTableData";
@@ -11,9 +12,7 @@ const EnentsTable = ({ fetch4 }) => {
   useEffect(() => {
     const fetchData = async () => {
       setLoading(true);
-      const { data } = await axios.get(
-        "http://68.183.17.93:4003/api/v1/events"
-      );
+      const { data } = await axios.get(`${ENDPOINT}/api/v1/events`);
       try {
         setLoading(true);
 

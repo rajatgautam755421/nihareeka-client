@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import TableData2 from "./TableData2";
 import Loader from "../../Loader";
+import { ENDPOINT } from "../../GlobalVariables";
 
 const Table = () => {
   const [Newsletters, setNewsletters] = useState([]);
@@ -12,9 +13,7 @@ const Table = () => {
     setLoading(true);
     try {
       setLoading(true);
-      const { data } = await axios.get(
-        "http://68.183.17.93:4003/api/v1/newsletter"
-      );
+      const { data } = await axios.get(`${ENDPOINT}/api/v1/newsletter`);
       console.log(data);
       setNewsletters(data);
       setLoading(false);

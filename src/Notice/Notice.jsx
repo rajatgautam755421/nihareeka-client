@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import { ENDPOINT } from "../GlobalVariables";
 import "./Notice.css";
 
 const Notice = () => {
@@ -8,9 +9,7 @@ const Notice = () => {
   const [error, setError] = useState(false);
   useEffect(() => {
     const fetchData = async () => {
-      const { data } = await axios.get(
-        "http://68.183.17.93:4003/api/v1/notice"
-      );
+      const { data } = await axios.get(`${ENDPOINT}/api/v1/notice`);
       try {
         console.log(data);
         setNotices(data);
@@ -20,16 +19,15 @@ const Notice = () => {
     };
     fetchData();
   }, []);
+
   const filteredValues = notices.filter((Events) => {
     return Events.title.toLowerCase().includes(search.toLowerCase());
   });
   const keyPress = () => {
     if (filteredValues.length === 0) {
       setError(true);
-      console.log("No such events");
     } else {
       setError(false);
-      console.log("Yes Events");
     }
   };
 

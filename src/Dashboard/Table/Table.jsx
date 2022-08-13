@@ -3,6 +3,7 @@ import axios from "axios";
 import TableData from "./TableData";
 import "./Table.css";
 import Loader from "../../Loader";
+import { ENDPOINT } from "../../GlobalVariables";
 const Table = () => {
   const [contacts, setContacts] = useState([]);
   const [clicked, setClicked] = useState(false);
@@ -11,9 +12,7 @@ const Table = () => {
     setLoading(true);
     try {
       setLoading(true);
-      const { data } = await axios.get(
-        "http://68.183.17.93:4003/api/v1/contact"
-      );
+      const { data } = await axios.get(`${ENDPOINT}/api/v1/contact`);
       setContacts(data.getContact);
       console.log(contacts);
       setLoading(false);

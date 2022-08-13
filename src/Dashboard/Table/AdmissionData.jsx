@@ -4,13 +4,14 @@ import DeleteIcon from "@mui/icons-material/Delete";
 import { Tooltip } from "@mui/material";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import { ENDPOINT } from "../../GlobalVariables";
 
 const AdmissionData = ({ value, render, setRender }) => {
   console.log(value);
 
   const handleClick = async () => {
     const { data } = await axios.delete(
-      `http://68.183.17.93:4003/api/v1/form/delete/${value ? value._id : null}`
+      `${ENDPOINT}/api/v1/form/delete/${value ? value._id : null}`
     );
     try {
       console.log(data);

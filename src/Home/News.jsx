@@ -5,6 +5,7 @@ import Backdrop from "@mui/material/Backdrop";
 import CloseIcon from "@mui/icons-material/Close";
 import "./News.css";
 import { Tooltip } from "@mui/material";
+import { ENDPOINT } from "../GlobalVariables";
 
 const News = () => {
   const [events, setEvents] = useState([]);
@@ -14,7 +15,7 @@ const News = () => {
   const [show3, setShow3] = useState(false);
 
   const fetchDaata = async () => {
-    const { data } = await axios.get("http://68.183.17.93:4003/api/v1/events");
+    const { data } = await axios.get(`${ENDPOINT}/api/v1/events`);
     try {
       console.log(data);
       setEvents(data);

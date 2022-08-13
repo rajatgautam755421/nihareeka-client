@@ -3,6 +3,7 @@ import DeleteIcon from "@mui/icons-material/Delete";
 import Loader from "../../Loader";
 import axios from "axios";
 import DeleteResultData from "./DeleteResultData";
+import { ENDPOINT } from "../../GlobalVariables";
 
 const DeleteResult = ({ fetch2, fetch3, setFetch3 }) => {
   const [result, setResults] = useState([]);
@@ -11,9 +12,7 @@ const DeleteResult = ({ fetch2, fetch3, setFetch3 }) => {
   useEffect(() => {
     const fetchItems = async () => {
       setLoading(true);
-      const { data } = await axios.get(
-        "http://68.183.17.93:4003/api/v1/result"
-      );
+      const { data } = await axios.get(`${ENDPOINT}/api/v1/result`);
       try {
         setLoading(true);
         console.log(data);

@@ -11,6 +11,7 @@ import CloseIcon from "@mui/icons-material/Close";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import CollectionsIcon from "@mui/icons-material/Collections";
+import { ENDPOINT } from "../GlobalVariables";
 
 const NewsAndEvents = () => {
   const [notices, setNotices] = useState([]);
@@ -18,9 +19,7 @@ const NewsAndEvents = () => {
   const [i, setI] = useState(0);
   useEffect(() => {
     const fetchData = async () => {
-      const { data } = await axios.get(
-        "http://68.183.17.93:4003/api/v1/events"
-      );
+      const { data } = await axios.get(`${ENDPOINT}/api/v1/events`);
       try {
         console.log(data);
         setNotices(data);

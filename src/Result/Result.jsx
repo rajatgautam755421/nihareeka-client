@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import { ENDPOINT } from "../GlobalVariables";
 import "./Result.css";
 
 const Result = () => {
@@ -9,9 +10,7 @@ const Result = () => {
   const [faculty, setFaculty] = useState("");
   useEffect(() => {
     const fetchData = async () => {
-      const { data } = await axios.get(
-        "http://68.183.17.93:4003/api/v1/result"
-      );
+      const { data } = await axios.get(`${ENDPOINT}/api/v1/result`);
       try {
         console.log(data);
         setNotices(data);

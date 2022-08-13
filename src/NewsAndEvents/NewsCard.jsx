@@ -1,7 +1,6 @@
 import React from "react";
 
 const NewsCard = ({ date, title, image, description }) => {
-  const today = new Date();
   return (
     <>
       <div className="p-4 md:w-1/3">

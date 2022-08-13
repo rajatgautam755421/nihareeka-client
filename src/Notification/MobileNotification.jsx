@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { ENDPOINT } from "../GlobalVariables";
 import Loader from "../Loader";
 import "./MobileNotification.css";
 
@@ -12,9 +13,7 @@ const MobileNotification = ({ clicked, setClicked, badge }) => {
     setLoading(true);
     try {
       setLoading(true);
-      const { data } = await axios.get(
-        "http://68.183.17.93:4003/api/v1/contact"
-      );
+      const { data } = await axios.get(`${ENDPOINT}/api/v1/contact`);
       console.log(data);
       setContacts(data.getContact);
       setLoading(false);
@@ -28,9 +27,7 @@ const MobileNotification = ({ clicked, setClicked, badge }) => {
   }, []);
 
   const handleClick = async () => {
-    const { data } = await axios.put(
-      `http://68.183.17.93:4003/api/v1/notification/false`
-    );
+    const { data } = await axios.put(`${ENDPOINT}/api/v1/notification/false`);
     try {
       setClicked(!clicked);
       console.log(data);

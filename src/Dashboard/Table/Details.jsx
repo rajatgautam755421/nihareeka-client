@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import "./Details.css";
 import { toast } from "react-toastify";
+import { ENDPOINT } from "../../GlobalVariables";
 
 const Details = () => {
   const { id } = useParams();
@@ -14,9 +15,7 @@ const Details = () => {
   useEffect(() => {
     const fetchData = async () => {
       setLoading(true);
-      const { data } = await axios.get(
-        `http://68.183.17.93:4003/api/v1/form/${id}`
-      );
+      const { data } = await axios.get(`${ENDPOINT}/api/v1/form/${id}`);
 
       try {
         setLoading(true);
@@ -34,12 +33,12 @@ const Details = () => {
 
   const handleAccept = async () => {
     const { data } = await axios.put(
-      `http://68.183.17.93:4003/api/v1/form/update/${id}/accepted`
+      `${ENDPOINT}/api/v1/form/update/${id}/accepted`
     );
     setRender(!render);
     if (data) {
       const response = await axios.get(
-        `http://68.183.17.93:4003/api/v1/mail/accept/${
+        `${ENDPOINT}/api/v1/mail/accept/${
           info ? info.email : null
         }/Your Admission Request Has Been Accepted.Please Contact Nihareeka College For More Information.`
       );
@@ -57,12 +56,12 @@ const Details = () => {
 
   const handleReject = async () => {
     const { data } = await axios.put(
-      `http://68.183.17.93:4003/api/v1/form/update/${id}/rejected`
+      `${ENDPOINT}/api/v1/form/update/${id}/rejected`
     );
     setRender(!render);
     if (data) {
       const response = await axios.get(
-        `http://68.183.17.93:4003/api/v1/mail/reject/${
+        `${ENDPOINT}/api/v1/mail/reject/${
           info ? info.email : null
         }/Your Admission Request Has Been Rejected.Please Contact Nihareeka College For More Information.`
       );

@@ -14,6 +14,7 @@ import Loader from "./Loader";
 import { TailSpin } from "react-loader-spinner";
 import { toast } from "react-toastify";
 import { Badge, Tooltip } from "@mui/material";
+import { ENDPOINT } from "./GlobalVariables";
 
 const Navbar = ({ clicked, setClicked }) => {
   console.log(clicked);
@@ -37,9 +38,7 @@ const Navbar = ({ clicked, setClicked }) => {
   useEffect(() => {
     setLoading(true);
     const getData = async () => {
-      const { data } = await axios.get(
-        "http://68.183.17.93:4003/api/v1/notification"
-      );
+      const { data } = await axios.get(`${ENDPOINT}/api/v1/notification`);
       try {
         setLoading(true);
         setShow(data[0]);

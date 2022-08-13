@@ -2,6 +2,7 @@ import { Skeleton } from "@mui/material";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { ENDPOINT } from "../GlobalVariables";
 import "./Form.css";
 
 const Print = () => {
@@ -14,9 +15,7 @@ const Print = () => {
   useEffect(() => {
     const fetchData = async () => {
       setLoading(true);
-      const { data } = await axios.get(
-        `http://68.183.17.93:4003/api/v1/form/${id}`
-      );
+      const { data } = await axios.get(`${ENDPOINT}/api/v1/form/${id}`);
 
       try {
         setLoading(true);

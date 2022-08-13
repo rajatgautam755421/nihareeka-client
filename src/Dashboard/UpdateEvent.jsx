@@ -4,6 +4,7 @@ import { toast } from "react-toastify";
 import Loader from "../Loader";
 import { TailSpin } from "react-loader-spinner";
 import "./Dashboard.css";
+import { ENDPOINT } from "../GlobalVariables";
 const UpdateEvent = ({ fetch4, setFetch4 }) => {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
@@ -50,15 +51,12 @@ const UpdateEvent = ({ fetch4, setFetch4 }) => {
       setLoading(false);
     } else {
       setLoading(true);
-      const { data } = await axios.post(
-        "http://68.183.17.93:4003/api/v1/events",
-        {
-          pic,
-          title,
-          category,
-          description,
-        }
-      );
+      const { data } = await axios.post(`${ENDPOINT}/api/v1/events`, {
+        pic,
+        title,
+        category,
+        description,
+      });
       try {
         setLoading(true);
         toast.success("Event Is Successfully Posted");

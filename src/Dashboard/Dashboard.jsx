@@ -21,6 +21,7 @@ import EventIcon from "@mui/icons-material/Event";
 import axios from "axios";
 import Admission from "./Table/Admission";
 import FormatListNumberedIcon from "@mui/icons-material/FormatListNumbered";
+import { ENDPOINT } from "../GlobalVariables";
 const Dashboard = () => {
   const [render, setRender] = useState(false);
   const [fetch1, setFetch] = useState(false);
@@ -29,9 +30,7 @@ const Dashboard = () => {
 
   useEffect(() => {
     const handleClick = async () => {
-      const { data } = await axios.put(
-        `http://68.183.17.93:4003/api/v1/notification/false`
-      );
+      const { data } = await axios.put(`${ENDPOINT}/api/v1/notification/false`);
       try {
         console.log(data);
       } catch (error) {

@@ -8,13 +8,6 @@ import Course from "../Course/Course";
 import WelcomeMessage from "./WelcomeMessage";
 import News from "./News";
 import Partners from "./Partners";
-import BBS from "../assets/CSIT/CSIT.JPG";
-import BHM from "../assets/BIM/BIM.JPG";
-
-import MBS from "../assets/CSIT/library.JPG";
-import BIM from "../assets/BIM/BIM.JPG";
-import CSIT from "../assets/CSIT/CSIT.JPG";
-import BCA from "../assets/BCA/BCA.JPG";
 import Testimonials from "../Testimonials/Testimonials";
 import Modal from "../Modal/Modal";
 import WelcomeMessage1 from "./WelcomeMessage1";
@@ -100,7 +93,9 @@ const Home = (props) => {
                 course={"BSc.CSIT"}
                 desc="Bachelor of Science in Computer Science and Information technology (B.Sc.CSIT) provides knowledge about principles of Computer Science and Information technology."
                 time="4 years|8 semesters"
-                image={CSIT}
+                image={
+                  "https://res.cloudinary.com/mechi-pharma123/image/upload/v1654324660/Staff/WhatsApp_Image_2022-06-04_at_12.21.24_PM_x0tkhe.jpg"
+                }
               />
             </div>
             <div className="beauty">
@@ -119,7 +114,9 @@ const Home = (props) => {
               <Course
                 course={"BCA"}
                 desc="Bachelor of Computer Application is a four years program spread over eight semesters. It is a program that helps to produce software developers and programmers."
-                image={BCA}
+                image={
+                  "https://res.cloudinary.com/mechi-pharma123/image/upload/v1654324660/Staff/WhatsApp_Image_2022-06-04_at_12.21.24_PM_x0tkhe.jpg"
+                }
                 time="4 years|8 semester"
               />
             </div>
@@ -128,7 +125,9 @@ const Home = (props) => {
               <Course
                 course={"BIM"}
                 desc="Bachelor of Information Management is four years program of Tribhuvan University that provides knowledge of Management Information and Communication System."
-                image={BHM}
+                image={
+                  "https://res.cloudinary.com/mechi-pharma123/image/upload/v1654324660/Staff/WhatsApp_Image_2022-06-04_at_12.21.24_PM_x0tkhe.jpg"
+                }
                 time="4 years|8 semester"
               />
             </div>

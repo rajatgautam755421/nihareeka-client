@@ -3,14 +3,13 @@ import Carousel from "./Carousel";
 import "./Hero.css";
 import Marquee from "react-fast-marquee";
 import axios from "axios";
+import { ENDPOINT } from "../GlobalVariables";
 const Hero = () => {
   const [notice, setNotice] = useState([]);
   const [newsDate, setNewsDate] = useState("");
   const fetchData = async () => {
     try {
-      const { data } = await axios.get(
-        "http://68.183.17.93:4003/api/v1/notice"
-      );
+      const { data } = await axios.get(`${ENDPOINT}/api/v1/notice`);
       console.log(data);
       setNotice(data);
     } catch (error) {
